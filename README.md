@@ -19,7 +19,7 @@ Using the reference UpdateServerStartup to start a ASP.NET web app
 Creating a custom ASP.NET web app
 
 ## Use the downsync utility
-The downsync command line utility is provided as a sample for using the library. Downsync can be used to deploy updates to Windows PC.
+The downsync utility is provided as a sample for using the library. Downsync can be used to deploy updates to Windows PC.
 
 You can build downsync in Visual Studio; it builds from the same solution as the library. Or download and unzip downsync from https://github.com/microsoft/update-client-server-sync/releases
 
