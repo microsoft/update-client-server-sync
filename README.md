@@ -23,9 +23,7 @@ The downsync utility is provided as a sample for using the library. Downsync can
 
 You can build downsync in Visual Studio; it builds from the same solution as the library. Or download and unzip downsync from https://github.com/microsoft/update-client-server-sync/releases
 
-See upsync command line options reference
-
-See upsync examples
+See [Using the DownSync utility](https://github.com/microsoft/update-client-server-sync/wiki/Using-the-DownSync-utility)
 
 # Contributing
 
