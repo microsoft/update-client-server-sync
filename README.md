@@ -7,25 +7,23 @@ Use this library to build solutions for deploying Microsoft updates to Windows P
 This library assumes update metadata and content was acquired and indexed using the [Server-Server Sync library](https://github.com/microsoft/update-server-server-sync).
 
 ## Reference the library in your project
-In your .NET Core project, add a reference to the **UpdateServices.ClientServerSync NuGet package**.
+In your .NET Core project, add a reference to the **[UpdateServices.ClientServerSync NuGet package](https://www.nuget.org/packages/UpdateServices.ClientServerSync)**.
 
 Alternatively, you can compile the code yourself. Visual Studio 2017 with .Net Core development tools is required to build the solution provided at build\client-server-sync.sln
 
 ## Using the library
-Please refer to the API documentation for help on using the library.
+Please refer to the [API documentation](https://microsoft.github.io/update-client-server-sync/) for help on using the library.
 
-Using the reference UpdateServerStartup to start a ASP.NET web app
+[Using UpdateServerStartup to start a ASP.NET web app](https://microsoft.github.io/update-client-server-sync/examples/default_startup.html)
 
-Creating a custom ASP.NET web app
+[Creating a custom ASP.NET web app](https://microsoft.github.io/update-client-server-sync/examples/custom_startup.html)
 
 ## Use the downsync utility
 The downsync utility is provided as a sample for using the library. Downsync can be used to deploy updates to Windows PC.
 
 You can build downsync in Visual Studio; it builds from the same solution as the library. Or download and unzip downsync from https://github.com/microsoft/update-client-server-sync/releases
 
-See upsync command line options reference
-
-See upsync examples
+See [Using the DownSync utility](https://github.com/microsoft/update-client-server-sync/wiki/Using-the-DownSync-utility)
 
 # Contributing
 
