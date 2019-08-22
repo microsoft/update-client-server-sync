@@ -1,0 +1,216 @@
+{
+  "homepages": [],
+  "source_base_path": "E:/src/update-client-server-sync/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html",
+          "hash": "lYnlduz5cyPXv5d2QM0U3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html",
+          "hash": "JFEuNJa7mAQALQWdFvgQAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html",
+          "hash": "inZM3BqXLyC8C4Ize8e2nQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.SimpleAuthenticationWebService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.SimpleAuthenticationWebService.html",
+          "hash": "+Sv5h2T4CJ2u/HS+rgxsgw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html",
+          "hash": "fdunLWzJIG9adkvd4dQeNw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.html",
+          "hash": "qiQeV/7AedOIdiJsOTeqfw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "lmVMI+RNqOI7OWcsrKBj8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "1MpFWtmNp8B/haXp9K7T1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/custom_startup.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/custom_startup.html",
+          "hash": "6YYgOUfGrgIjl30UaD/mNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/default_startup.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/default_startup.html",
+          "hash": "+Qu8lk6aISy1kOFdBsYWEQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "examples/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "examples/toc.html",
+          "hash": "xRUvUvdriOtD9bonWoLYyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "reho5VEiC4NqrCbgHHeatw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "dOL6XVUnx0MIRE6uvyZNAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 6
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 3
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

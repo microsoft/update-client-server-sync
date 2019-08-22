@@ -1,0 +1,25 @@
+apiRules:
+
+- exclude:
+    uidRegex: ^Microsoft\.UpdateServices\.WebServices\.ClientReporting$
+    type: Namespace
+
+- exclude:
+    uidRegex: ^Microsoft\.UpdateServices\.WebServices\.ClientAuthentication$
+    type: Namespace
+
+- exclude:
+    uidRegex: ^Microsoft\.UpdateServices\.WebServices\.ClientSync$
+    type: Namespace
+
+- exclude:
+    uidRegex: ^Microsoft\.AspNetCore\.Mvc$
+    type: Namespace
+
+- exclude:
+    uidRegex: ^System\.Object
+    type: Type
+
+- exclude:
+    uidRegex: ^System\.Exception
+    type: Type

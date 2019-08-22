@@ -1,0 +1,1638 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>client-server-sync-lib</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.Cookie">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.Cookie.Expiration">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.Cookie.EncryptedData">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupUpdateStatus">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupUpdateStatus.UpdateId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupUpdateStatus.SummarizationState">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupUpdateStatus.LastChangeTime">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo.InstanceId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo.ComputerId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo.EffectiveLastDetectionTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo.RollupNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo.IsFullRollup">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo.UpdateStatus">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber.ComputerId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber.RollupNumber">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ChangedComputer">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ChangedComputer.ComputerId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ChangedComputer.Change">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerChangeType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerChangeType.Deleted">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerChangeType.NewParent">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.TargetGroupIdList">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.RequestedTargetGroupNames">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.IPAddress">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.FullDomainName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSMajorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSMinorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSBuildNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSServicePackMajorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSServicePackMinorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSLocale">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSFamily">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OSDescription">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.ComputerMake">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.ComputerModel">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.BiosVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.BiosName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.BiosReleaseDate">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.ProcessorArchitecture">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.SuiteMask">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.OldProductType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.NewProductType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.SystemMetrics">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupDetails.ClientVersion">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.Details">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.ComputerId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.LastSyncTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.LastSyncResult">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.LastReportedRebootTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.LastReportedStatusTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.LastInventoryTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo.ParentServerId">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientActivitySummary">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientActivitySummary.UpdateId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientActivitySummary.RevisionNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientActivitySummary.InstallSuccessCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientActivitySummary.InstallFailureCount">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.OSMajorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.OSMinorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.OSBuildNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.OSServicePackMajorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.OSServicePackMinorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.OSLocale">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.SuiteMask">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.OldProductType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.NewProductType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.SystemMetrics">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.ProcessorArchitecture">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.Count">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupClientSummary.ActivitySummaries">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.UpdateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.DeclinedUpdateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.ApprovedUpdateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.NotApprovedUpdateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.UpdatesWithStaleUpdateApprovalsCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.ExpiredUpdateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.CriticalOrSecurityUpdatesNotApprovedForInstallCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.WsusInfrastructureUpdatesNotApprovedForInstallCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.UpdatesWithClientErrorsCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.UpdatesWithServerErrorsCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.UpdatesNeedingFilesCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.UpdatesNeededByComputersCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.UpdatesUpToDateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.CustomComputerTargetGroupCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.ComputerTargetCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.ComputerTargetsNeedingUpdatesCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.ComputerTargetsWithUpdateErrorsCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupServerSummary.ComputersUpToDateCount">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.ServerId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.FullDomainName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.LastSyncTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.ParentServerId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.Version">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.IsReplica">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.LastRollupTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.ServerSummary">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo.ClientSummaries">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration.DoDetailedRollup">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration.RollupResetGuid">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration.ServerId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration.RollupDownstreamServersMaxBatchSize">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration.RollupComputersMaxBatchSize">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration.GetOutOfSyncComputersMaxBatchSize">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration.RollupComputerStatusMaxBatchSize">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory.IsCompressed">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory.RawXml">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory.CompressedXml">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.PrivateData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.PrivateData.ComputerDnsName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.PrivateData.UserAccountName">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.DetailedVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DetailedVersion.Major">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DetailedVersion.Minor">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DetailedVersion.Build">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DetailedVersion.Revision">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DetailedVersion.ServicePackMajor">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.DetailedVersion.ServicePackMinor">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.ReplacementStrings">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.MiscData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.ComputerBrand">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.ComputerModel">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.BiosRevision">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.ProcessorArchitecture">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.OSVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.OSLocaleID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ExtendedData.DeviceID">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ProcessorArchitecture">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientReporting.ProcessorArchitecture.Unknown">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientReporting.ProcessorArchitecture.X86Compatible">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientReporting.ProcessorArchitecture.IA64Compatible">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientReporting.ProcessorArchitecture.Amd64Compatible">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.UpdateRevisionIdentifier">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.UpdateRevisionIdentifier.UpdateID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.UpdateRevisionIdentifier.RevisionNumber">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerTargetIdentifier">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ComputerTargetIdentifier.Sid">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.TargetID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.SequenceNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.TimeAtTarget">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.EventInstanceID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.NamespaceID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.EventID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.SourceID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.UpdateID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.Win32HResult">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.BasicData.AppName">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent.BasicData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent.ExtendedData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent.PrivateData">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.Config">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Config.LastChange">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Config.IsRegistrationRequired">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Config.AuthInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Config.AllowedEventIds">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Config.Properties">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.AuthPlugInInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.AuthPlugInInfo.PlugInID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.AuthPlugInInfo.ServiceUrl">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.AuthPlugInInfo.Parameter">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.GetFileLocationsResults">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.GetFileLocationsResults.FileLocations">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.GetFileLocationsResults.NewCookie">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.FileLocation">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileLocation.FileDigest">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileLocation.Url">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.Cookie">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Cookie.Expiration">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Cookie.EncryptedData">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption2">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption2.FileDigest">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption2.DecryptionKey">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption2.SecurityData">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption.FileDigest">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption.DecryptionKey">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.FileDecryption.SecurityData">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.UpdateReportingSampleRate">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateReportingSampleRate.UpdateId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateReportingSampleRate.SamplingRateForInstall">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateReportingSampleRate.SamplingRateForDownload">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2.Updates">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2.FileLocations">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2.UpdateReportingSamplingRates">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2.FileDecryptionData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2.FileDecryptionData2">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.UpdateData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateData.ID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateData.Xml">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateData.Verification">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.Verification">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Verification.Timestamp">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Verification.LeafCertificateId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Verification.Signature">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Verification.Algorithm">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult.RevisionID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult.GlobalID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult.IsLeaf">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult.IsShared">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult.Deployment">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity.UpdateID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity.RevisionNumber">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.Deployment">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.ID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.Action">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.Deadline">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.IsAssigned">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.LastChangeTime">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.DownloadPriority">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.HardwareIds">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.DriverMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.AutoSelect">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.AutoDownload">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.SupersedenceBehavior">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.FlagBitmask">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.Priority">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.HandlerSpecificAction">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.TargetGroupId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.TargetGroupIdSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.TargetingVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.FlightId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.CacheLifetimeMinutes">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.CacheLifetimeMinutesSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Deployment.FlightMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.DeploymentAction">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.DeploymentAction.Install">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.DeploymentAction.Uninstall">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.DeploymentAction.PreDeploymentCheck">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.DeploymentAction.Block">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.DeploymentAction.Evaluate">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.DeploymentAction.Bundle">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.DriverMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.DriverMetadata.Model">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.DriverMetadata.Manufacturer">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo.Updates">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo.FileLocations">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo.OutOfScopeRevisionIDs">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.UpdateInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateInfo.ID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateInfo.Deployment">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateInfo.IsLeaf">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateInfo.IsShared">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateInfo.Xml">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.UpdateInfo.Verification">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.NewUpdates">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.OutOfScopeRevisionIDs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.ChangedUpdates">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.Truncated">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.NewCookie">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.DeployedOutOfScopeRevisionIds">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.DriverSyncNotNeeded">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.ExtendedUpdateInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo.CountryCode">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.SyncProductsParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncProductsParameters.SyncCurrentVersionOnly">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncProductsParameters.DeviceAttributes">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncProductsParameters.CallerAttributes">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncProductsParameters.Products">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUserInfoParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUserInfoParameters.Version">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUserInfoParameters.ExtendedUserInfo">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfoParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfoParameters.XmlUpdateFragmentTypes">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfoParameters.Locales">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.Published">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.Core">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.Extended">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.VerificationRule">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.LocalizedProperties">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.Eula">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.FileUrl">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.FileDecryption">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType.SamplingRate">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ComputerHardwareSpecification">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerHardwareSpecification.HardwareIDs">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.CategoryIdentifier">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.CategoryIdentifier.Id">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ExtensionDriver">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtensionDriver.ExtensionId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtensionDriver.DriverVerDate">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtensionDriver.DriverVerVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ExtensionDriver.Class">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.MatchingID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.DriverVerDate">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.DriverVerVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.Class">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.Manufacturer">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.Provider">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.Model">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.MatchingComputerHWID">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.MatchingComputerHWIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.DriverRank">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.SkipProviderFiltering">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.SkipProviderFilteringSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.IsGeneric">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver.IsGenericSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.Device">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Device.HardwareIDs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Device.CompatibleIDs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Device.installedDriver">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.Device.extensionDrivers">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.ExpressQuery">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.InstalledNonLeafUpdateIDs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.OtherCachedUpdateIDs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.SystemSpec">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.CachedDriverIDs">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.SkipSoftwareSync">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.FilterCategoryIds">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.NeedTwoGroupOutOfScopeUpdates">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.FilterAppCategoryIds">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.TreatAppCategoryIdsAsInstalled">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.TreatAppCategoryIdsAsInstalledSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.AlsoPerformRegularSync">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.ComputerSpec">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.FeatureScoreMatchingKey">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.ExtendedUpdateInfoParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.ExtendedUserInfoParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.ClientPreferredLanguages">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.WuBundleId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.WuBundleIdSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.ProductsParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters.PendingUpdateIDs">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.CategoryRelationship">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.CategoryRelationship.IndexOfAndGroup">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.CategoryRelationship.CategoryId">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.DnsName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OSMajorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OSMinorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OSBuildNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OSServicePackMajorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OSServicePackMinorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OSLocale">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.ComputerManufacturer">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.ComputerModel">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.BiosVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.BiosName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.BiosReleaseDate">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.ProcessorArchitecture">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.SuiteMask">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OldProductType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.NewProductType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.SystemMetrics">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.ClientVersionMajorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.ClientVersionMinorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.ClientVersionBuildNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.ClientVersionQfeNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OSDescription">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.OEM">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.DeviceType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.FirmwareVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo.MobileOperator">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie.PlugInId">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie.CookieData">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.OSVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.OSVersion.MajorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.OSVersion.MinorVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.OSVersion.BuildNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.OSVersion.ServicePackMajorNumber">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.OSVersion.ServicePackMinorNumber">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration.ProcessorArchitecture">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration.AlwaysOnAlwaysConnected">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration.ClientVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration.OSVersion">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration.ProtocolVersion">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.Architecture">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.Architecture.Unknown">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.Architecture.X86Compatible">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.Architecture.IA64Compatible">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.Architecture.Amd64Compatible">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.Architecture.ArmCompatible">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.UpdateServices.WebServices.ClientSync.Architecture.LpiaCompatible">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.WebServices.ClientSync.ConfigurationProperty">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ConfigurationProperty.Name">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.UpdateServices.WebServices.ClientSync.ConfigurationProperty.Value">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService">
+            <summary>
+            Windows Update Server implementation. Provides updates to Windows PCs
+            </summary>
+            <example>
+            <para>Attach this service to your ASP.NET service using SoapCore:</para>
+            <code>
+            public void ConfigureServices(IServiceCollection services)
+            {
+               // Enable SoapCore; this middleware provides translation services from WCF/SOAP to Asp.net
+               services.AddSoapCore();
+               //
+               // Initialization data
+               var localMetadataSource = CompressedMetadataStore.Open(sourcePath);
+               var updateServiceConfiguration = Newtonsoft.Json.JsonConvert.DeserializeObject&lt;Config&gt;(
+                   File.OpenText(serviceConfigPath).ReadToEnd());
+               //
+               // Attach the service using the initialization parameters
+               services.TryAddSingleton&lt;ClientSyncWebService&gt;(
+                   new Server.ClientSyncWebService(
+                       localMetadataSource,
+                       updateServiceConfiguration,
+                       // address of this server; becomes the root for update content URLs
+                       // Windows clients connect to content URLs to download update content
+                       // If this server is not serving content, this parameter can be null
+                       serverAddress));
+               ...
+            }
+            public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+            {
+                app.UseSoapEndpoint&lt;ClientSyncWebService&lt;(
+                    "/ClientWebService/client.asmx",
+                    new BasicHttpBinding(),
+                    SoapSerializer.XmlSerializer);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="F:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.MetadataSource">
+            <summary>
+            The local repository from where updates are served.
+            </summary>
+        </member>
+        <member name="F:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.MetadataSourceIndex">
+            <summary>
+            Mapping of update index to its identity
+            Update indexes are used when communicating with clients, as they are smaller that full Identities
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)">
+            <summary>
+            Instantiates a Windows Update server instance.
+            </summary>
+            <param name="metadataSource">The source for updates metadata</param>
+            <param name="updateServiceConfiguration">Update service configuration. Sent to clients when requested with GetConfig and GetConfig2</param>
+            <param name="contentRoot">The content root to use when setting the download URL in updates metadata</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfig2Async(Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration)">
+            <summary>
+            Handle get configuration requests from clients
+            </summary>
+            <param name="clientConfiguration">The client configuration as received from a Windows client</param>
+            <returns>The server configuration to be sent to a Windows client</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfigAsync(System.String)">
+            <summary>
+            Handle get configuration requests from clients
+            </summary>
+            <param name="protocolVersion">The version of the Windows client connecting to this server</param>
+            <returns>The server configuration to be sent to a Windows client</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Handle get cookie requests. All requests are all granted access and a cookie is issued.
+            </summary>
+            <param name="authCookies">Authorization cookies received from the client</param>
+            <param name="oldCookie">Old cookie from client</param>
+            <param name="lastChange"></param>
+            <param name="currentTime"></param>
+            <param name="protocolVersion">Client supported protocol version</param>
+            <returns>A new cookie</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfo2Async(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity[],Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType[],System.String[],System.String)">
+            <summary>
+            Not implemented.
+            </summary>
+            <param name="cookie">Not implemented</param>
+            <param name="updateIDs">Not implemented</param>
+            <param name="infoTypes">Not implemented</param>
+            <param name="locales">Not implemented</param>
+            <param name="deviceAttributes">Not implemented</param>
+            <returns>Not implemented</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfoAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Int32[],Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType[],System.String[],System.String)">
+            <summary>
+            Handle requests for extended update information. The extended information is extracted from update metadata.
+            Extended information also includes file URLs
+            </summary>
+            <param name="cookie">Access cookie</param>
+            <param name="revisionIDs">Revision Ids for which to get extended information</param>
+            <param name="infoTypes">The type of extended information requested</param>
+            <param name="locales">The language to use when getting language dependent extended information</param>
+            <param name="deviceAttributes">Device attributes; unused</param>
+            <returns>Extended update information response.</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetFileLocationsAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Byte[][])">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="fileDigests"></param>
+            <returns>Not implemented</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetTimestampsAsync(Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsRequest)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="request"></param>
+            <returns>Not implemented</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RefreshCacheAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity[],System.String)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="globalIDs"></param>
+            <param name="deviceAttributes"></param>
+            <returns>Not implemented</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RegisterComputerAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="computerInfo"></param>
+            <returns>Not implemented</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.StartCategoryScanAsync(Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanRequest)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="request"></param>
+            <returns>Not implemented</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncPrinterCatalogAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Int32[],System.Int32[],System.String)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="installedNonLeafUpdateIDs"></param>
+            <param name="printerUpdateIDs"></param>
+            <param name="deviceAttributes"></param>
+            <returns>Not implemented</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncUpdatesAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">
+            <summary>
+            Handle requests to sync updates. A client presents the list of installed updates and detectoids and the server
+            replies with a list of more applicable updates, if any.
+            </summary>
+            <param name="cookie">Access cookie</param>
+            <param name="parameters">Request parameters: list of installed updates, list of known updates, etc.</param>
+            <returns>SyncInfo containing updates applicable to the caller.</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetInstalledNotLeafGuidsFromSyncParameters(Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">
+            <summary>
+            Extract installed non-leaf updates from the response and maps them to a GUID
+            </summary>
+            <param name="parameters">Sync parameters</param>
+            <returns>List of update GUIDs</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetOtherCachedUpdateGuidsFromSyncParameters(Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">
+            <summary>
+            Extract list of other known updates from the client and maps them to a  GUID
+            </summary>
+            <param name="parameters">Sync parameters</param>
+            <returns>List of update GUIDs</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.CreateUpdateInfoListFromSoftwareUpdate(System.Collections.Generic.List{Microsoft.UpdateServices.Metadata.SoftwareUpdate})">
+            <summary>
+            Creates a list of updates to be sent to the client, based on the specified list of software updates.
+            The update information sent to the client contains a deployment field and a core XML fragment extracted
+            from the full metadata of the update
+            </summary>
+            <param name="softwareUpdates">List of software updates to send to the client</param>
+            <returns>List of updates that can be appended to a SyncUpdates SOAP response to a client</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.CreateUpdateInfoListFromNonLeafUpdates(System.Collections.Generic.List{Microsoft.UpdateServices.Metadata.Update})">
+            <summary>
+            Creates a list of updates to be sent to the client, based on the specified list of category updates.
+            The update information sent to the client contains a deployment field and a core XML fragment extracted
+            from the full metadata of the update
+            </summary>
+            <param name="nonLeafUpdates">List of non-software updates to send to the client. These are usually detectoids, categories and classifications</param>
+            <returns>List of updates that can be appended to a SyncUpdates SOAP response to a client</returns>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController">
+            <summary>
+            MVC controller for handling update content requests from Windows clients
+            </summary>
+            <example>
+            <para>Attach this service to your ASP.NET service:</para>
+            <code>
+            public void ConfigureServices(IServiceCollection services)
+            {
+               var localMetadataSource = CompressedMetadataStore.Open(sourcePath);
+               var contentSource = new FileSystemContentStore(contentPath);
+               services.TryAddSingleton&lt;ClientSyncContentController&gt;(
+                   new ClientSyncContentController(localMetadataSource, contentSource));
+               //
+               // Add ClientSyncContentController from its containing assembly
+               services
+                   .AddMvc()
+                   .AddApplicationPart(
+                       Assembly.Load(
+                           "Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController"))
+                   .AddControllersAsServices();
+               ...
+            }
+            // Configure routes for the content controller
+            public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+            {
+                // Add the content controller to MVC route
+                app.UseMvc(routes =&gt;
+                {
+                    routes.MapRoute(
+                        name: "getContent",
+                        template: "Content/{directory}/{name}",
+                        defaults: new 
+                        {
+                            controller = "ClientSyncContent",
+                            action = "GetUpdateContent"
+                        });
+                });
+            ...
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.Storage.IUpdateContentSource)">
+            <summary>
+            Create a content controller from the specified metadata and update content sources.
+            </summary>
+            <param name="metadataSource">The source of update metadata. Used to build the list of known files to serve.</param>
+            <param name="contentSource">The source of content. Used to read update content and send it to clients.</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContent(System.String,System.String)">
+            <summary>
+            Handle HTTP GET requests on the Content/(Directory)/(FileHash) URLs
+            </summary>
+            <param name="directory">The directory name for an update file</param>
+            <param name="name">The file name for an update file</param>
+            <returns>File content on success, other error codes otherwise</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContentHead(System.String,System.String)">
+            <summary>
+            Handle HTTP HEAD requests on the Content/(Directory)/(FileName) URLs
+            </summary>
+            <param name="directory">The directory name for an update file</param>
+            <param name="name">The file name for an update file</param>
+            <returns>File header on success, other error codes otherwise</returns>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.IClientSyncWebService">
+            <summary>
+            Declare an interface for the ClientSoap (WCF) service that can be used in AspNetCore with slight modifications.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.IReportingWebService">
+            <summary>
+            Declare an interface for the IReportingWebService (WCF) service that can be used in AspNetCore with slight modifications.
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.ISimpleAuthenticationWebService">
+            <summary>
+            Declare an interface for the SimpleAuthSoap (WCF) service that can be used in AspNetCore with slight modifications.
+            GetAuthorizationCookieAsync returns AuthorizationCookie instead of the nested GetAuthorizationCookieResult\GetAuthorizationResultBody
+            </summary>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService">
+            <summary>
+            Reporting web service implementation. Placeholder only.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="parentServerId"></param>
+            <param name="lastRollupNumbers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,System.String)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="rulesId"></param>
+            <param name="rulesVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRollupConfigurationAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="computerId"></param>
+            <param name="clientTime"></param>
+            <param name="eventBatch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="clientTime"></param>
+            <param name="eventBatch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="clientTime"></param>
+            <param name="inventory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="clientTime"></param>
+            <param name="computers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="clientTime"></param>
+            <param name="parentServerId"></param>
+            <param name="computers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])">
+            <summary>
+            Not implemented
+            </summary>
+            <param name="cookie"></param>
+            <param name="clientTime"></param>
+            <param name="downstreamServers"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.SimpleAuthenticationWebService">
+            <summary>
+            Authentication service implementation. Reference implementation: all requests are authenticated and a token issued.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.SimpleAuthenticationWebService.GetAuthorizationCookieAsync(Microsoft.UpdateServices.WebServices.ClientAuthentication.GetAuthorizationCookieRequest)">
+            <summary>
+            Handle requests for a authorization token. This implementation issues tokens for all requests without performing any checks.
+            </summary>
+            <param name="request">The request paramerets. Not used in this implementation.</param>
+            <returns>Authorization cookie</returns>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup">
+            <summary>
+            Startup class for a ASP.NET Core web service that implements the Client-Server sync protocol.
+            <para>A web service started with UpdateServerStartup acts as an update server to Windows PCs.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initialize a new instance of UpdateServerStartup.
+            </summary>
+            <param name="config">
+            <para>ASP.NET configuration.</para>
+            <list type="bullet">
+            <item><description>Required: string entry "metadata-source" with the path to file containing updates metadata.</description></item>
+            <item><description>Required: string entry "server-config" containing the server configuration in JSON format. A reference server configuration file is provided.</description></item>
+            <item><description>Optional: string entry "content-source" containing the path where update content is stored.</description></item>
+            <item><description>Optional: string entry "content-http-root" with the root URL where update content is serverd from (e.g. http://my-update-server.com). Usually this set to the address/name of the server. Required if "content-source" is specified.</description></item>
+            </list>
+            </param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Called by ASP.NET to configure services
+            </summary>
+            <param name="services">Service collection.
+            <para>The client-server sync and simple authentication services are added to this list.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Called by ASP.NET to configure a web app's application pipeline
+            </summary>
+            <param name="app">Applicatin to configure.
+            <para>A SOAP endpoint is configured for this app.</para>
+            </param>
+            <param name="env">Hosting environment.</param>
+            <param name="loggerFactory">Logging factory.</param>
+        </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.DataModel.UpdateXmlTransformer">
+            <summary>
+            Convert the update XML into various fragments to be sent to clients.
+            See https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wusp/7b42ccc2-770b-4452-a0f8-e731474ad619
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.DataModel.UpdateXmlTransformer.GetCoreFragmentFromMetadataXml(System.String)">
+            <summary>
+            Gets a core XML fragment from full update metadata XML.
+            See: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wusp/7b42ccc2-770b-4452-a0f8-e731474ad619
+            </summary>
+            <param name="metadataXml">Complete update XML</param>
+            <returns>Core fragment</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.DataModel.UpdateXmlTransformer.GetExtendedFragmentFromMetadataXml(System.String)">
+            <summary>
+            Get an extended fragment from full update metadata
+            See https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-wusp/7b42ccc2-770b-4452-a0f8-e731474ad619
+            </summary>
+            <param name="metadataXml">Update metadata XML</param>
+            <returns>Extended fragment</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.DataModel.UpdateXmlTransformer.GetLocalizedPropertiesFromMetadataXml(System.String,System.String[])">
+            <summary>
+            Gets localized properties fragment from full update metadata
+            </summary>
+            <param name="metadataXml">Update metadata XML</param>
+            <param name="languages">Language to get the localized properties for</param>
+            <returns>Localized properties fragment</returns>
+        </member>
+    </members>
+</doc>

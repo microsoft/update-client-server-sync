@@ -1,0 +1,841 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ClientSyncWebService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClientSyncWebService
+   ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService">
+  
+  
+  <h1 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService" class="text-break">Class ClientSyncWebService
+  </h1>
+  <div class="markdown level0 summary"><p>Windows Update Server implementation. Provides updates to Windows PCs</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ClientSyncWebService</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.UpdateServices.ClientSync.Server.html">Microsoft.UpdateServices.ClientSync.Server</a></h6>
+  <h6><strong>Assembly</strong>: client-server-sync-lib.dll</h6>
+  <h5 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ClientSyncWebService : IClientSyncWebService</code></pre>
+  </div>
+  <h5 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_examples"><strong>Examples</strong></h5>
+  <p>Attach this service to your ASP.NET service using SoapCore:</p>
+<pre><code>public void ConfigureServices(IServiceCollection services)
+{
+   // Enable SoapCore; this middleware provides translation services from WCF/SOAP to Asp.net
+   services.AddSoapCore();
+   //
+   // Initialization data
+   var localMetadataSource = CompressedMetadataStore.Open(sourcePath);
+   var updateServiceConfiguration = Newtonsoft.Json.JsonConvert.DeserializeObject&lt;Config>(
+       File.OpenText(serviceConfigPath).ReadToEnd());
+   //
+   // Attach the service using the initialization parameters
+   services.TryAddSingleton&lt;ClientSyncWebService>(
+       new Server.ClientSyncWebService(
+           localMetadataSource,
+           updateServiceConfiguration,
+           // address of this server; becomes the root for update content URLs
+           // Windows clients connect to content URLs to download update content
+           // If this server is not serving content, this parameter can be null
+           serverAddress));
+   ...
+}</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_Microsoft_UpdateServices_Storage_IMetadataSource_Microsoft_UpdateServices_WebServices_ClientSync_Config_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)">ClientSyncWebService(IMetadataSource, Config, String)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a Windows Update server instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientSyncWebService(IMetadataSource metadataSource, Config updateServiceConfiguration, string contentRoot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.Storage.IMetadataSource</span></td>
+        <td><span class="parametername">metadataSource</span></td>
+        <td><p>The source for updates metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span></td>
+        <td><span class="parametername">updateServiceConfiguration</span></td>
+        <td><p>Update service configuration. Sent to clients when requested with GetConfig and GetConfig2</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">contentRoot</span></td>
+        <td><p>The content root to use when setting the download URL in updates metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfig2Async_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfig2Async*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfig2Async_Microsoft_UpdateServices_WebServices_ClientSync_ClientConfiguration_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfig2Async(Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration)">GetConfig2Async(ClientConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Handle get configuration requests from clients</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Config&gt; GetConfig2Async(ClientConfiguration clientConfiguration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration</span></td>
+        <td><span class="parametername">clientConfiguration</span></td>
+        <td><p>The client configuration as received from a Windows client</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span>&gt;</td>
+        <td><p>The server configuration to be sent to a Windows client</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfigAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfigAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfigAsync_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfigAsync(System.String)">GetConfigAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Handle get configuration requests from clients</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Config&gt; GetConfigAsync(string protocolVersion)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">protocolVersion</span></td>
+        <td><p>The version of the Windows client connecting to this server</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span>&gt;</td>
+        <td><p>The server configuration to be sent to a Windows client</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_Microsoft_UpdateServices_WebServices_ClientSync_AuthorizationCookie___Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_DateTime_System_DateTime_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.DateTime,System.DateTime,System.String)">GetCookieAsync(AuthorizationCookie[], Cookie, DateTime, DateTime, String)</h4>
+  <div class="markdown level1 summary"><p>Handle get cookie requests. All requests are all granted access and a cookie is issued.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Cookie&gt; GetCookieAsync(AuthorizationCookie[] authCookies, Cookie oldCookie, DateTime lastChange, DateTime currentTime, string protocolVersion)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie</span>[]</td>
+        <td><span class="parametername">authCookies</span></td>
+        <td><p>Authorization cookies received from the client</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">oldCookie</span></td>
+        <td><p>Old cookie from client</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">lastChange</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">currentTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">protocolVersion</span></td>
+        <td><p>Client supported protocol version</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span>&gt;</td>
+        <td><p>A new cookie</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfo2Async_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfo2Async*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfo2Async_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_UpdateIdentity___Microsoft_UpdateServices_WebServices_ClientSync_XmlUpdateFragmentType___System_String___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfo2Async(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity[],Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType[],System.String[],System.String)">GetExtendedUpdateInfo2Async(Cookie, UpdateIdentity[], XmlUpdateFragmentType[], String[], String)</h4>
+  <div class="markdown level1 summary"><p>Not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ExtendedUpdateInfo2&gt; GetExtendedUpdateInfo2Async(Cookie cookie, UpdateIdentity[] updateIDs, XmlUpdateFragmentType[] infoTypes, string[] locales, string deviceAttributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">cookie</span></td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity</span>[]</td>
+        <td><span class="parametername">updateIDs</span></td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType</span>[]</td>
+        <td><span class="parametername">infoTypes</span></td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">locales</span></td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">deviceAttributes</span></td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2</span>&gt;</td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfoAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfoAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfoAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Int32___Microsoft_UpdateServices_WebServices_ClientSync_XmlUpdateFragmentType___System_String___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfoAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Int32[],Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType[],System.String[],System.String)">GetExtendedUpdateInfoAsync(Cookie, Int32[], XmlUpdateFragmentType[], String[], String)</h4>
+  <div class="markdown level1 summary"><p>Handle requests for extended update information. The extended information is extracted from update metadata.
+Extended information also includes file URLs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ExtendedUpdateInfo&gt; GetExtendedUpdateInfoAsync(Cookie cookie, int[] revisionIDs, XmlUpdateFragmentType[] infoTypes, string[] locales, string deviceAttributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">cookie</span></td>
+        <td><p>Access cookie</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td><span class="parametername">revisionIDs</span></td>
+        <td><p>Revision Ids for which to get extended information</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType</span>[]</td>
+        <td><span class="parametername">infoTypes</span></td>
+        <td><p>The type of extended information requested</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">locales</span></td>
+        <td><p>The language to use when getting language dependent extended information</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">deviceAttributes</span></td>
+        <td><p>Device attributes; unused</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo</span>&gt;</td>
+        <td><p>Extended update information response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetFileLocationsAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetFileLocationsAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetFileLocationsAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Byte_____" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetFileLocationsAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Byte[][])">GetFileLocationsAsync(Cookie, Byte[][])</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetFileLocationsResults&gt; GetFileLocationsAsync(Cookie cookie, byte[][] fileDigests)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">cookie</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[][]</td>
+        <td><span class="parametername">fileDigests</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.GetFileLocationsResults</span>&gt;</td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetTimestampsAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetTimestampsAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetTimestampsAsync_Microsoft_UpdateServices_WebServices_ClientSync_GetTimestampsRequest_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetTimestampsAsync(Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsRequest)">GetTimestampsAsync(GetTimestampsRequest)</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetTimestampsResponse&gt; GetTimestampsAsync(GetTimestampsRequest request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsResponse</span>&gt;</td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RefreshCacheAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RefreshCacheAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RefreshCacheAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_UpdateIdentity___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RefreshCacheAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity[],System.String)">RefreshCacheAsync(Cookie, UpdateIdentity[], String)</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RefreshCacheResult[]&gt; RefreshCacheAsync(Cookie cookie, UpdateIdentity[] globalIDs, string deviceAttributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">cookie</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity</span>[]</td>
+        <td><span class="parametername">globalIDs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">deviceAttributes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult</span>[]&gt;</td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RegisterComputerAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RegisterComputerAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RegisterComputerAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_ComputerInfo_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RegisterComputerAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo)">RegisterComputerAsync(Cookie, ComputerInfo)</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RegisterComputerAsync(Cookie cookie, ComputerInfo computerInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">cookie</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo</span></td>
+        <td><span class="parametername">computerInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_StartCategoryScanAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.StartCategoryScanAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_StartCategoryScanAsync_Microsoft_UpdateServices_WebServices_ClientSync_StartCategoryScanRequest_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.StartCategoryScanAsync(Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanRequest)">StartCategoryScanAsync(StartCategoryScanRequest)</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;StartCategoryScanResponse&gt; StartCategoryScanAsync(StartCategoryScanRequest request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanResponse</span>&gt;</td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncPrinterCatalogAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncPrinterCatalogAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncPrinterCatalogAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Int32___System_Int32___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncPrinterCatalogAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Int32[],System.Int32[],System.String)">SyncPrinterCatalogAsync(Cookie, Int32[], Int32[], String)</h4>
+  <div class="markdown level1 summary"><p>Not implemented</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SyncInfo&gt; SyncPrinterCatalogAsync(Cookie cookie, int[] installedNonLeafUpdateIDs, int[] printerUpdateIDs, string deviceAttributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">cookie</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td><span class="parametername">installedNonLeafUpdateIDs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td><span class="parametername">printerUpdateIDs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">deviceAttributes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo</span>&gt;</td>
+        <td><p>Not implemented</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncUpdatesAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncUpdatesAsync*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncUpdatesAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_SyncUpdateParameters_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncUpdatesAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">SyncUpdatesAsync(Cookie, SyncUpdateParameters)</h4>
+  <div class="markdown level1 summary"><p>Handle requests to sync updates. A client presents the list of installed updates and detectoids and the server
+replies with a list of more applicable updates, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SyncInfo&gt; SyncUpdatesAsync(Cookie cookie, SyncUpdateParameters parameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span></td>
+        <td><span class="parametername">cookie</span></td>
+        <td><p>Access cookie</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters</span></td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>Request parameters: list of installed updates, list of known updates, etc.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo</span>&gt;</td>
+        <td><p>SyncInfo containing updates applicable to the caller.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

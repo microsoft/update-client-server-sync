@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>UpdateServices.ClientServerSync</id>
+    <version>1.0.0</version>
+    <title>Microsoft Update Services: Client-Server Sync</title>
+    <summary>Sample implementation of the Windows Update protocol in a ASP.NET Core service</summary>
+    <authors>Cristian Petruta</authors>
+    <owners>Cristian Petruta</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://microsoft.github.io/update-client-server-sync/</projectUrl>
+    <description>Sample implementation of the Windows Update protocol in a ASP.NET Core service</description>
+    <releaseNotes>Initial release. Driver updates not implemented. Reporting services not implemented.</releaseNotes>
+    <tags>Windows Update WSUS WU MS-WSUSSS MS-WUSP</tags>
+    <repository type="GIT" url="https://github.com/microsoft/update-client-server-sync" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="System.ServiceModel.Duplex" version="4.5.3" exclude="Build,Analyzers" />
+        <dependency id="System.ServiceModel.Http" version="4.5.3" exclude="Build,Analyzers" />
+        <dependency id="System.ServiceModel.NetTcp" version="4.5.3" exclude="Build,Analyzers" />
+        <dependency id="System.ServiceModel.Security" version="4.5.3" exclude="Build,Analyzers" />
+        <dependency id="UpdateServices.ServerServerSync" version="2.0.7" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\client-server-sync-lib\bin\Release\netcoreapp2.1\client-server-sync-lib.dll" target="lib\netcoreapp2.1\client-server-sync-lib.dll" />
+    <file src="readme.txt" target="\readme.txt" />
+  </files>
+</package>
