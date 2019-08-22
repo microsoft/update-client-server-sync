@@ -1,6 +1,6 @@
 # Microsoft.UpdateServices Client Sync
 
-This library provides a C# implementation (.NET Core) of the Microsoft Update Client-Server sync protocol. The server implementation is compatible with the Windows Update client included with the Windows operating system.
+This library provides a C# implementation (.NET Core) of the Microsoft Update Client-Server sync protocol. The server implementation enables deploying Microsoft updates to Windows PCs and is compatible with the Windows Update client included with the Windows operating system.
 
 
 The server implementation is cross platform and can be used on all platforms where .NET Core is avaialble. It can also be run as a ASP.NET web app in the cloud.
