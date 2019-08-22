@@ -7,7 +7,7 @@ Use this library to build solutions for deploying Microsoft updates to Windows P
 This library assumes update metadata and content was acquired and indexed using the [Server-Server Sync library](https://github.com/microsoft/update-server-server-sync).
 
 ## Reference the library in your project
-In your .NET Core project, add a reference to the **UpdateServices.ClientServerSync NuGet package**.
+In your .NET Core project, add a reference to the **[UpdateServices.ClientServerSync NuGet package](https://www.nuget.org/packages/UpdateServices.ClientServerSync)**.
 
 Alternatively, you can compile the code yourself. Visual Studio 2017 with .Net Core development tools is required to build the solution provided at build\client-server-sync.sln
 
