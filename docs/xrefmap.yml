@@ -7,51 +7,51 @@ references:
   commentId: N:Microsoft.UpdateServices.ClientSync.Server
   fullName: Microsoft.UpdateServices.ClientSync.Server
   nameWithType: Microsoft.UpdateServices.ClientSync.Server
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController
-  name: ClientServerSyncContentController
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html
-  commentId: T:Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController
-  nameWithType: ClientServerSyncContentController
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.Storage.IUpdateContentSource)
-  name: ClientServerSyncContentController(IMetadataSource, IUpdateContentSource)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientServerSyncContentController__ctor_Microsoft_UpdateServices_Storage_IMetadataSource_Microsoft_UpdateServices_Storage_IUpdateContentSource_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.Storage.IUpdateContentSource)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.ClientServerSyncContentController(Microsoft.UpdateServices.Storage.IMetadataSource, Microsoft.UpdateServices.Storage.IUpdateContentSource)
-  nameWithType: ClientServerSyncContentController.ClientServerSyncContentController(IMetadataSource, IUpdateContentSource)
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.#ctor*
-  name: ClientServerSyncContentController
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientServerSyncContentController__ctor_
-  commentId: Overload:Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.#ctor
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController
+  name: ClientSyncContentController
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html
+  commentId: T:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController
+  nameWithType: ClientSyncContentController
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.Storage.IUpdateContentSource)
+  name: ClientSyncContentController(IMetadataSource, IUpdateContentSource)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController__ctor_Microsoft_UpdateServices_Storage_IMetadataSource_Microsoft_UpdateServices_Storage_IUpdateContentSource_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.Storage.IUpdateContentSource)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.ClientSyncContentController(Microsoft.UpdateServices.Storage.IMetadataSource, Microsoft.UpdateServices.Storage.IUpdateContentSource)
+  nameWithType: ClientSyncContentController.ClientSyncContentController(IMetadataSource, IUpdateContentSource)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor*
+  name: ClientSyncContentController
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController__ctor_
+  commentId: Overload:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor
   isSpec: "True"
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.ClientServerSyncContentController
-  nameWithType: ClientServerSyncContentController.ClientServerSyncContentController
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContent(System.String,System.String)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.ClientSyncContentController
+  nameWithType: ClientSyncContentController.ClientSyncContentController
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContent(System.String,System.String)
   name: GetUpdateContent(String, String)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientServerSyncContentController_GetUpdateContent_System_String_System_String_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContent(System.String,System.String)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContent(System.String, System.String)
-  nameWithType: ClientServerSyncContentController.GetUpdateContent(String, String)
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContent*
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController_GetUpdateContent_System_String_System_String_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContent(System.String,System.String)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContent(System.String, System.String)
+  nameWithType: ClientSyncContentController.GetUpdateContent(String, String)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContent*
   name: GetUpdateContent
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientServerSyncContentController_GetUpdateContent_
-  commentId: Overload:Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContent
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController_GetUpdateContent_
+  commentId: Overload:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContent
   isSpec: "True"
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContent
-  nameWithType: ClientServerSyncContentController.GetUpdateContent
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContentHead(System.String,System.String)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContent
+  nameWithType: ClientSyncContentController.GetUpdateContent
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContentHead(System.String,System.String)
   name: GetUpdateContentHead(String, String)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientServerSyncContentController_GetUpdateContentHead_System_String_System_String_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContentHead(System.String,System.String)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContentHead(System.String, System.String)
-  nameWithType: ClientServerSyncContentController.GetUpdateContentHead(String, String)
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContentHead*
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController_GetUpdateContentHead_System_String_System_String_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContentHead(System.String,System.String)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContentHead(System.String, System.String)
+  nameWithType: ClientSyncContentController.GetUpdateContentHead(String, String)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContentHead*
   name: GetUpdateContentHead
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientServerSyncContentController_GetUpdateContentHead_
-  commentId: Overload:Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContentHead
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController_GetUpdateContentHead_
+  commentId: Overload:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContentHead
   isSpec: "True"
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.GetUpdateContentHead
-  nameWithType: ClientServerSyncContentController.GetUpdateContentHead
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.GetUpdateContentHead
+  nameWithType: ClientSyncContentController.GetUpdateContentHead
 - uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService
   name: ClientSyncWebService
   href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html

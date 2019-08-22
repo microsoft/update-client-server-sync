@@ -6,9 +6,10 @@
 * the server configuration JSON is in server_configuration.json 
 * the server address is http://my_update_server
 
-In your ASP.NEt startup class:
+#### Add update services to your startup
 
 ```
+// Startup's ConfigureServices
 public void ConfigureServices(IServiceCollection services)
 {
     var localMetadataSource = CompressedMetadataStore.Open(sourcePath);
@@ -39,7 +40,8 @@ public void ConfigureServices(IServiceCollection services)
     services.TryAddSingleton<SimpleAuthenticationWebService>();
     services.TryAddSingleton<ReportingWebService>();
 }
-    
+
+// Startup's configure
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
     // Add the content controller to MVC route

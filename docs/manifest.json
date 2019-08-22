@@ -5,11 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.yml",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController.html",
-          "hash": "lYnlduz5cyPXv5d2QM0U3Q=="
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html",
+          "hash": "rOrRoO4c5NVvTSdzvmOd0A=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html",
-          "hash": "JFEuNJa7mAQALQWdFvgQAg=="
+          "hash": "9AwWzoNzMCzqyafbIStBxg=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.html",
-          "hash": "qiQeV/7AedOIdiJsOTeqfw=="
+          "hash": "/P9sbj/JN6+WuOPVItn75w=="
         }
       },
       "is_incremental": true,
@@ -96,7 +96,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "1MpFWtmNp8B/haXp9K7T1w=="
+          "hash": "V9iVQBEHCV6jbV2ggEpJ9Q=="
         }
       },
       "is_incremental": false,
@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "examples/custom_startup.html",
-          "hash": "6YYgOUfGrgIjl30UaD/mNA=="
+          "hash": "Igk6WtwOn9/O5N2jknmn9Q=="
         }
       },
       "is_incremental": false,
@@ -120,7 +120,7 @@
       "output": {
         ".html": {
           "relative_path": "examples/default_startup.html",
-          "hash": "+Qu8lk6aISy1kOFdBsYWEQ=="
+          "hash": "LltUwmbkFG4oIPn0HILmJg=="
         }
       },
       "is_incremental": true,
@@ -147,7 +147,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "reho5VEiC4NqrCbgHHeatw=="
+          "hash": "5DYI189b9aMuBnEFVPbt+w=="
         }
       },
       "is_incremental": true,
@@ -175,13 +175,6 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -193,6 +186,13 @@
           "incrementalPhase": "build",
           "total_file_count": 4,
           "skipped_file_count": 3
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         }
       }
     },

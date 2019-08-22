@@ -109,6 +109,13 @@
            // If this server is not serving content, this parameter can be null
            serverAddress));
    ...
+}
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+    app.UseSoapEndpoint&lt;ClientSyncWebService&lt;(
+        &quot;/ClientWebService/client.asmx&quot;,
+        new BasicHttpBinding(),
+        SoapSerializer.XmlSerializer);
 }</code></pre>
 
   <h3 id="constructors">Constructors

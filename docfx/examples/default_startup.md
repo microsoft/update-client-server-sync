@@ -1,4 +1,4 @@
-### Use the reference UpdateServerStartup to add update services to your ASP.NET web app
+### Use UpdateServerStartup to add update services to your ASP.NET web app
 
 #### Prerequisites
 * updates were fetched to a file named master.zip
@@ -6,7 +6,7 @@
 * the server configuration JSON is in server_configuration.json 
 * the server address is http://my_update_server
 
-In your ASP.NET app:
+#### Use the startup in your app
 
 ```
 var host = new WebHostBuilder()
