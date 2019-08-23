@@ -13,11 +13,11 @@ references:
   commentId: T:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController
   fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController
   nameWithType: ClientSyncContentController
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.Storage.IUpdateContentSource)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor(IMetadataSource,IUpdateContentSource)
   name: ClientSyncContentController(IMetadataSource, IUpdateContentSource)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController__ctor_Microsoft_UpdateServices_Storage_IMetadataSource_Microsoft_UpdateServices_Storage_IUpdateContentSource_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.Storage.IUpdateContentSource)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.ClientSyncContentController(Microsoft.UpdateServices.Storage.IMetadataSource, Microsoft.UpdateServices.Storage.IUpdateContentSource)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncContentController__ctor_IMetadataSource_IUpdateContentSource_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor(IMetadataSource,IUpdateContentSource)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.ClientSyncContentController(IMetadataSource, IUpdateContentSource)
   nameWithType: ClientSyncContentController.ClientSyncContentController(IMetadataSource, IUpdateContentSource)
 - uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.#ctor*
   name: ClientSyncContentController
@@ -58,11 +58,11 @@ references:
   commentId: T:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService
   fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService
   nameWithType: ClientSyncWebService
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)
   name: ClientSyncWebService(IMetadataSource, Config, String)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_Microsoft_UpdateServices_Storage_IMetadataSource_Microsoft_UpdateServices_WebServices_ClientSync_Config_System_String_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClientSyncWebService(Microsoft.UpdateServices.Storage.IMetadataSource, Microsoft.UpdateServices.WebServices.ClientSync.Config, System.String)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_IMetadataSource_Microsoft_UpdateServices_WebServices_ClientSync_Config_System_String_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClientSyncWebService(IMetadataSource, Microsoft.UpdateServices.WebServices.ClientSync.Config, System.String)
   nameWithType: ClientSyncWebService.ClientSyncWebService(IMetadataSource, Config, String)
 - uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor*
   name: ClientSyncWebService
@@ -97,13 +97,13 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfigAsync
   nameWithType: ClientSyncWebService.GetConfigAsync
-- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.DateTime,System.DateTime,System.String)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,DateTime,DateTime,System.String)
   name: GetCookieAsync(AuthorizationCookie[], Cookie, DateTime, DateTime, String)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_Microsoft_UpdateServices_WebServices_ClientSync_AuthorizationCookie___Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_DateTime_System_DateTime_System_String_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.DateTime,System.DateTime,System.String)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html#Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_Microsoft_UpdateServices_WebServices_ClientSync_AuthorizationCookie___Microsoft_UpdateServices_WebServices_ClientSync_Cookie_DateTime_DateTime_System_String_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,DateTime,DateTime,System.String)
   name.vb: GetCookieAsync(AuthorizationCookie(), Cookie, DateTime, DateTime, String)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[], Microsoft.UpdateServices.WebServices.ClientSync.Cookie, System.DateTime, System.DateTime, System.String)
-  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie(), Microsoft.UpdateServices.WebServices.ClientSync.Cookie, System.DateTime, System.DateTime, System.String)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[], Microsoft.UpdateServices.WebServices.ClientSync.Cookie, DateTime, DateTime, System.String)
+  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie(), Microsoft.UpdateServices.WebServices.ClientSync.Cookie, DateTime, DateTime, System.String)
   nameWithType: ClientSyncWebService.GetCookieAsync(AuthorizationCookie[], Cookie, DateTime, DateTime, String)
   nameWithType.vb: ClientSyncWebService.GetCookieAsync(AuthorizationCookie(), Cookie, DateTime, DateTime, String)
 - uid: Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync*
@@ -251,13 +251,13 @@ references:
   commentId: T:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService
   nameWithType: ReportingWebService
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])
   name: GetOutOfSyncComputersAsync(Cookie, Guid, ComputerLastRollupNumber[])
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetOutOfSyncComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerLastRollupNumber___
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetOutOfSyncComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerLastRollupNumber___
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])
   name.vb: GetOutOfSyncComputersAsync(Cookie, Guid, ComputerLastRollupNumber())
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])
-  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber())
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])
+  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber())
   nameWithType: ReportingWebService.GetOutOfSyncComputersAsync(Cookie, Guid, ComputerLastRollupNumber[])
   nameWithType.vb: ReportingWebService.GetOutOfSyncComputersAsync(Cookie, Guid, ComputerLastRollupNumber())
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync*
@@ -267,11 +267,11 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync
   nameWithType: ReportingWebService.GetOutOfSyncComputersAsync
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,System.String)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,Guid,System.String)
   name: GetRequiredInventoryTypeAsync(Cookie, Guid, String)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRequiredInventoryTypeAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_Guid_System_String_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,System.String)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.Guid, System.String)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRequiredInventoryTypeAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_Guid_System_String_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,Guid,System.String)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, Guid, System.String)
   nameWithType: ReportingWebService.GetRequiredInventoryTypeAsync(Cookie, Guid, String)
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync*
   name: GetRequiredInventoryTypeAsync
@@ -293,13 +293,13 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRollupConfigurationAsync
   nameWithType: ReportingWebService.GetRollupConfigurationAsync
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
   name: ReportEventBatch2Async(String, DateTime, ReportingEvent[])
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatch2Async_System_String_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatch2Async_System_String_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
   name.vb: ReportEventBatch2Async(String, DateTime, ReportingEvent())
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
-  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent())
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
+  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent())
   nameWithType: ReportingWebService.ReportEventBatch2Async(String, DateTime, ReportingEvent[])
   nameWithType.vb: ReportingWebService.ReportEventBatch2Async(String, DateTime, ReportingEvent())
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async*
@@ -309,13 +309,13 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async
   nameWithType: ReportingWebService.ReportEventBatch2Async
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
   name: ReportEventBatchAsync(Cookie, DateTime, ReportingEvent[])
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatchAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatchAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
   name.vb: ReportEventBatchAsync(Cookie, DateTime, ReportingEvent())
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
-  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent())
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])
+  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent())
   nameWithType: ReportingWebService.ReportEventBatchAsync(Cookie, DateTime, ReportingEvent[])
   nameWithType.vb: ReportingWebService.ReportEventBatchAsync(Cookie, DateTime, ReportingEvent())
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync*
@@ -325,11 +325,11 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync
   nameWithType: ReportingWebService.ReportEventBatchAsync
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)
   name: ReportInventoryAsync(Cookie, DateTime, ReportingInventory)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportInventoryAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingInventory_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportInventoryAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingInventory_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)
   nameWithType: ReportingWebService.ReportInventoryAsync(Cookie, DateTime, ReportingInventory)
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync*
   name: ReportInventoryAsync
@@ -338,13 +338,13 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync
   nameWithType: ReportingWebService.ReportInventoryAsync
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])
   name: RollupComputersAsync(Cookie, DateTime, ComputerRollupInfo[])
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerRollupInfo___
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerRollupInfo___
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])
   name.vb: RollupComputersAsync(Cookie, DateTime, ComputerRollupInfo())
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])
-  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo())
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])
+  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo())
   nameWithType: ReportingWebService.RollupComputersAsync(Cookie, DateTime, ComputerRollupInfo[])
   nameWithType.vb: ReportingWebService.RollupComputersAsync(Cookie, DateTime, ComputerRollupInfo())
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync*
@@ -354,13 +354,13 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync
   nameWithType: ReportingWebService.RollupComputersAsync
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])
   name: RollupComputerStatusAsync(Cookie, DateTime, Guid, ComputerStatusRollupInfo[])
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputerStatusAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_System_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerStatusRollupInfo___
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputerStatusAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerStatusRollupInfo___
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])
   name.vb: RollupComputerStatusAsync(Cookie, DateTime, Guid, ComputerStatusRollupInfo())
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, System.Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])
-  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, System.Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo())
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])
+  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Guid, Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo())
   nameWithType: ReportingWebService.RollupComputerStatusAsync(Cookie, DateTime, Guid, ComputerStatusRollupInfo[])
   nameWithType.vb: ReportingWebService.RollupComputerStatusAsync(Cookie, DateTime, Guid, ComputerStatusRollupInfo())
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync*
@@ -370,13 +370,13 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync
   nameWithType: ReportingWebService.RollupComputerStatusAsync
-- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])
+- uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])
   name: RollupDownstreamServersAsync(Cookie, DateTime, DownstreamServerRollupInfo[])
-  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupDownstreamServersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_DownstreamServerRollupInfo___
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])
+  href: api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html#Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupDownstreamServersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_DownstreamServerRollupInfo___
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])
   name.vb: RollupDownstreamServersAsync(Cookie, DateTime, DownstreamServerRollupInfo())
-  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])
-  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, System.DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo())
+  fullName: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])
+  fullName.vb: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie, DateTime, Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo())
   nameWithType: ReportingWebService.RollupDownstreamServersAsync(Cookie, DateTime, DownstreamServerRollupInfo[])
   nameWithType.vb: ReportingWebService.RollupDownstreamServersAsync(Cookie, DateTime, DownstreamServerRollupInfo())
 - uid: Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync*
@@ -411,11 +411,11 @@ references:
   commentId: T:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup
   fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup
   nameWithType: UpdateServerStartup
-- uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+- uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.#ctor(IConfiguration)
   name: UpdateServerStartup(IConfiguration)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html#Microsoft_UpdateServices_ClientSync_Server_UpdateServerStartup__ctor_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.UpdateServerStartup(Microsoft.Extensions.Configuration.IConfiguration)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html#Microsoft_UpdateServices_ClientSync_Server_UpdateServerStartup__ctor_IConfiguration_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.#ctor(IConfiguration)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.UpdateServerStartup(IConfiguration)
   nameWithType: UpdateServerStartup.UpdateServerStartup(IConfiguration)
 - uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.#ctor*
   name: UpdateServerStartup
@@ -424,11 +424,11 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.UpdateServerStartup
   nameWithType: UpdateServerStartup.UpdateServerStartup
-- uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
+- uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory)
   name: Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html#Microsoft_UpdateServices_ClientSync_Server_UpdateServerStartup_Configure_Microsoft_AspNetCore_Builder_IApplicationBuilder_Microsoft_AspNetCore_Hosting_IHostingEnvironment_Microsoft_Extensions_Logging_ILoggerFactory_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment, Microsoft.Extensions.Logging.ILoggerFactory)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html#Microsoft_UpdateServices_ClientSync_Server_UpdateServerStartup_Configure_IApplicationBuilder_IHostingEnvironment_ILoggerFactory_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
   nameWithType: UpdateServerStartup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
 - uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure*
   name: Configure
@@ -437,11 +437,11 @@ references:
   isSpec: "True"
   fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.Configure
   nameWithType: UpdateServerStartup.Configure
-- uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices(IServiceCollection)
   name: ConfigureServices(IServiceCollection)
-  href: api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html#Microsoft_UpdateServices_ClientSync_Server_UpdateServerStartup_ConfigureServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html#Microsoft_UpdateServices_ClientSync_Server_UpdateServerStartup_ConfigureServices_IServiceCollection_
+  commentId: M:Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices(IServiceCollection)
+  fullName: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices(IServiceCollection)
   nameWithType: UpdateServerStartup.ConfigureServices(IServiceCollection)
 - uid: Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.ConfigureServices*
   name: ConfigureServices

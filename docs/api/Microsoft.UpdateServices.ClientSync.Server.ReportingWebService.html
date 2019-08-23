@@ -85,14 +85,19 @@
   <h6><strong>Assembly</strong>: client-server-sync-lib.dll</h6>
   <h5 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReportingWebService : IReportingWebService</code></pre>
+    <pre><code class="lang-csharp hljs">public class ReportingWebService : object, IReportingWebService</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetOutOfSyncComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerLastRollupNumber___.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie%2CGuid%2CMicrosoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L22">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetOutOfSyncComputersAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetOutOfSyncComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerLastRollupNumber___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])">GetOutOfSyncComputersAsync(Cookie, Guid, ComputerLastRollupNumber[])</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetOutOfSyncComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerLastRollupNumber___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetOutOfSyncComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerLastRollupNumber[])">GetOutOfSyncComputersAsync(Cookie, Guid, ComputerLastRollupNumber[])</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -116,7 +121,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Guid</span></td>
+        <td><span class="xref">Guid</span></td>
         <td><span class="parametername">parentServerId</span></td>
         <td></td>
       </tr>
@@ -137,15 +142,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>[]&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRequiredInventoryTypeAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_Guid_System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie%2CGuid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L34">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRequiredInventoryTypeAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRequiredInventoryTypeAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_Guid_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.Guid,System.String)">GetRequiredInventoryTypeAsync(Cookie, Guid, String)</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRequiredInventoryTypeAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_Guid_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRequiredInventoryTypeAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,Guid,System.String)">GetRequiredInventoryTypeAsync(Cookie, Guid, String)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -169,7 +179,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Guid</span></td>
+        <td><span class="xref">Guid</span></td>
         <td><span class="parametername">rulesId</span></td>
         <td></td>
       </tr>
@@ -190,13 +200,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRollupConfigurationAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRollupConfigurationAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L44">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRollupConfigurationAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRollupConfigurationAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_GetRollupConfigurationAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.GetRollupConfigurationAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie)">GetRollupConfigurationAsync(Cookie)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -233,15 +248,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientReporting.RollupConfiguration</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatch2Async_System_String_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String%2CDateTime%2CMicrosoft.UpdateServices.WebServices.ClientReporting.ReportingEvent%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L56">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatch2Async_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatch2Async_System_String_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])">ReportEventBatch2Async(String, DateTime, ReportingEvent[])</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatch2Async_System_String_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatch2Async(System.String,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])">ReportEventBatch2Async(String, DateTime, ReportingEvent[])</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -265,7 +285,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">clientTime</span></td>
         <td></td>
       </tr>
@@ -286,15 +306,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatchAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie%2CDateTime%2CMicrosoft.UpdateServices.WebServices.ClientReporting.ReportingEvent%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L68">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatchAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatchAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])">ReportEventBatchAsync(Cookie, DateTime, ReportingEvent[])</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportEventBatchAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingEvent___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportEventBatchAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingEvent[])">ReportEventBatchAsync(Cookie, DateTime, ReportingEvent[])</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -318,7 +343,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">clientTime</span></td>
         <td></td>
       </tr>
@@ -339,15 +364,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportInventoryAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingInventory_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie%2CDateTime%2CMicrosoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L80">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportInventoryAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportInventoryAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingInventory_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)">ReportInventoryAsync(Cookie, DateTime, ReportingInventory)</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_ReportInventoryAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ReportingInventory_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.ReportInventoryAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ReportingInventory)">ReportInventoryAsync(Cookie, DateTime, ReportingInventory)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -371,7 +401,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">clientTime</span></td>
         <td></td>
       </tr>
@@ -392,15 +422,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerRollupInfo___.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie%2CDateTime%2CMicrosoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L92">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputersAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerRollupInfo___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])">RollupComputersAsync(Cookie, DateTime, ComputerRollupInfo[])</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerRollupInfo___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerRollupInfo[])">RollupComputersAsync(Cookie, DateTime, ComputerRollupInfo[])</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -424,7 +459,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">clientTime</span></td>
         <td></td>
       </tr>
@@ -445,15 +480,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientReporting.ChangedComputer</span>[]&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientReporting.ChangedComputer</span>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputerStatusAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerStatusRollupInfo___.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie%2CDateTime%2CGuid%2CMicrosoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L105">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputerStatusAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputerStatusAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_System_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerStatusRollupInfo___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,System.Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])">RollupComputerStatusAsync(Cookie, DateTime, Guid, ComputerStatusRollupInfo[])</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupComputerStatusAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Guid_Microsoft_UpdateServices_WebServices_ClientReporting_ComputerStatusRollupInfo___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupComputerStatusAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Guid,Microsoft.UpdateServices.WebServices.ClientReporting.ComputerStatusRollupInfo[])">RollupComputerStatusAsync(Cookie, DateTime, Guid, ComputerStatusRollupInfo[])</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -477,12 +517,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">clientTime</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Guid</span></td>
+        <td><span class="xref">Guid</span></td>
         <td><span class="parametername">parentServerId</span></td>
         <td></td>
       </tr>
@@ -503,15 +543,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupDownstreamServersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_DownstreamServerRollupInfo___.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie%2CDateTime%2CMicrosoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L117">View Source</a>
+  </span>
   <a id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupDownstreamServersAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupDownstreamServersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_System_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_DownstreamServerRollupInfo___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,System.DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])">RollupDownstreamServersAsync(Cookie, DateTime, DownstreamServerRollupInfo[])</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ReportingWebService_RollupDownstreamServersAsync_Microsoft_UpdateServices_WebServices_ClientReporting_Cookie_DateTime_Microsoft_UpdateServices_WebServices_ClientReporting_DownstreamServerRollupInfo___" data-uid="Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.RollupDownstreamServersAsync(Microsoft.UpdateServices.WebServices.ClientReporting.Cookie,DateTime,Microsoft.UpdateServices.WebServices.ClientReporting.DownstreamServerRollupInfo[])">RollupDownstreamServersAsync(Cookie, DateTime, DownstreamServerRollupInfo[])</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -535,7 +580,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">clientTime</span></td>
         <td></td>
       </tr>
@@ -556,7 +601,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -568,6 +613,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ReportingWebService.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ReportingWebService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ReportingService.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

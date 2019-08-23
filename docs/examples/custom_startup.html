@@ -71,10 +71,10 @@
 
 <h4 id="prerequisites">Prerequisites</h4>
 <ul>
-<li>updates were fetched to a file named master.zip</li>
-<li>content was downloaded to .\content</li>
-<li>the server configuration JSON is in server_configuration.json</li>
-<li>the server address is http://my_update_server</li>
+<li>update metadata was fetched to a file named master.zip. Use UpSync to fetch updates from an upstream server (<a href="https://github.com/microsoft/update-server-server-sync/wiki/UpSync-examples">link</a>)</li>
+<li>the server configuration JSON is in server_configuration.json. Get a default configuration file from <a href="https://raw.githubusercontent.com/microsoft/update-client-server-sync/master/src/downsync-tool/default-server-configuration.json">here</a></li>
+<li>update content was downloaded to .\content. Use UpSync to fetch update content.</li>
+<li>the server address is http://&lt;my_update_server&gt;:<port> or http://<ip>:<port></port></ip></port></li>
 </ul>
 <h4 id="add-update-services-to-your-startup">Add update services to your startup</h4>
 <pre><code>// Startup's ConfigureServices
@@ -85,17 +85,17 @@ public void ConfigureServices(IServiceCollection services)
     var contentSource = new FileSystemContentStore(contentPath);
 
     var updateServiceConfiguration = Newtonsoft.Json.JsonConvert.DeserializeObject&lt;Config&gt;(
-        File.OpenText(&quot;server_configuration.json&quot;).ReadToEnd());
+        File.ReadAllText(&quot;server_configuration.json&quot;));
     
-    // Add ClientServerSyncContentController from its containing assembly
-    services.TryAddSingleton&amp;lt;ClientServerSyncContentController&amp;gt;(
-        new ClientServerSyncContentController(localMetadataSource, contentSource));
+    // Add ClientSyncContentController from its containing assembly
+    services.TryAddSingleton&lt;ClientSyncContentController&gt;(
+        new ClientSyncContentController(localMetadataSource, contentSource));
 
     services
         .AddMvc()
         .AddApplicationPart(
             Assembly.Load(
-              &quot;Microsoft.UpdateServices.ClientSync.Server.ClientServerSyncContentController&quot;))
+              &quot;Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController&quot;))
         .AddControllersAsServices();
 
     // Enable SoapCore; this middleware provides translation services from WCF/SOAP to Asp.net
@@ -120,7 +120,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
             template: &quot;Content/{directory}/{name}&quot;,
             defaults: new
             {
-                controller = &quot;ClientServerSyncContent&quot;,
+                controller = &quot;ClientSyncContent&quot;,
                 action = &quot;GetUpdateContent&quot;
             });
     });
@@ -149,6 +149,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/docfx/examples/custom_startup.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

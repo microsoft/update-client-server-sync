@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "E:/src/update-client-server-sync/docfx",
+  "source_base_path": "D:/src/update-client-server-sync/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html",
-          "hash": "rOrRoO4c5NVvTSdzvmOd0A=="
+          "hash": "6aNNaG6P9pQfQiZUHpwmAA=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html",
-          "hash": "9AwWzoNzMCzqyafbIStBxg=="
+          "hash": "WSkiihQnDWY8r6kBHKdlGQ=="
         }
       },
       "is_incremental": true,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html",
-          "hash": "inZM3BqXLyC8C4Ize8e2nQ=="
+          "hash": "OjVaC3p1EPI7iE15wGd9zw=="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.SimpleAuthenticationWebService.html",
-          "hash": "+Sv5h2T4CJ2u/HS+rgxsgw=="
+          "hash": "5QFqZ92FVV7CHye2xlhJ0Q=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html",
-          "hash": "fdunLWzJIG9adkvd4dQeNw=="
+          "hash": "c/ja0V6i11aSonYrLc3AxA=="
         }
       },
       "is_incremental": true,
@@ -84,7 +84,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "lmVMI+RNqOI7OWcsrKBj8Q=="
+          "hash": "RRocYrf7YRPoloT281v1nA=="
         }
       },
       "is_incremental": true,
@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "examples/custom_startup.html",
-          "hash": "Igk6WtwOn9/O5N2jknmn9Q=="
+          "hash": "2+HNFrXDjagvGAIZDSkJTA=="
         }
       },
       "is_incremental": true,
@@ -120,7 +120,7 @@
       "output": {
         ".html": {
           "relative_path": "examples/default_startup.html",
-          "hash": "LltUwmbkFG4oIPn0HILmJg=="
+          "hash": "DP19Ku94sopwPp5xOHRdMw=="
         }
       },
       "is_incremental": true,
@@ -147,10 +147,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "k8b3wUAXtMsUl9V0xq29Vg=="
+          "hash": "QGWboM18kQR3qKlK5jdrog=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -175,12 +175,11 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 4,
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
@@ -188,11 +187,12 @@
           "total_file_count": 6,
           "skipped_file_count": 6
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 4,
-          "skipped_file_count": 3
+          "total_file_count": 0,
+          "skipped_file_count": 0
         }
       }
     },

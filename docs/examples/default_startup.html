@@ -71,10 +71,8 @@
 
 <h4 id="prerequisites">Prerequisites</h4>
 <ul>
-<li>updates were fetched to a file named master.zip</li>
-<li>content was downloaded to .\content</li>
-<li>the server configuration JSON is in server_configuration.json</li>
-<li>the server address is http://my_update_server</li>
+<li>updates were fetched to a file named master.zip. Use UpSync to fetch some updates from an upstream server (<a href="https://github.com/microsoft/update-server-server-sync/wiki/UpSync-examples">link</a>)</li>
+<li>the server configuration JSON is in server_configuration.json. Get a default configuration file from <a href="https://raw.githubusercontent.com/microsoft/update-client-server-sync/master/src/downsync-tool/default-server-configuration.json">here</a></li>
 </ul>
 <h4 id="use-the-startup-in-your-app">Use the startup in your app</h4>
 <pre><code>var host = new WebHostBuilder()
@@ -87,9 +85,12 @@
         var configDictionary = new Dictionary&lt;string, string&gt;()
         {
             { &quot;metadata-source&quot;, @&quot;master.zip&quot; },
-            { &quot;server-config&quot;, @&quot;server_configuration.json&quot;},
-            { &quot;content-source&quot;, @&quot;.\content&quot; },
-            { &quot;content-http-root&quot;, @&quot;http://my_update_server&quot; }
+            { &quot;server-config&quot;, File.ReadAllText(@&quot;server_configuration.json&quot;)},
+            // This server does not serve update content; clients will be directed
+            // to the Microsoft Update CDN
+            { &quot;content-source&quot;, null },
+            // Not required when content downloads are redirected to the official CDN
+            { &quot;content-http-root&quot;, null }
         };
         config.AddInMemoryCollection(configDictionary);
     })
@@ -104,6 +105,9 @@ host.Run();
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/docfx/examples/default_startup.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

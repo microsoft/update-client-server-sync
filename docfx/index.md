@@ -6,6 +6,9 @@ This library provides a C# implementation (.NET Core) of the Microsoft Update Cl
 The server implementation is cross platform and can be used on all platforms where .NET Core is avaialble. It can also be run as a ASP.NET web app in the cloud.
 
 
+To fetch update metadata and content for deploying with this library, please see the [documentation for the Microsoft Update Server-Server sync protocol](https://microsoft.github.io/update-server-server-sync) and the [GitHub repo](https://github.com/microsoft/update-server-server-sync)
+
+
 To get started, see [how to run updates services in a ASP.NET web app](examples/default_startup.html)
 
 
