@@ -79,7 +79,9 @@ namespace Microsoft.UpdateServices.ClientSync.Server
             services.AddSoapCore();
 
             // Enable the upstream WCF services
-            services.TryAddSingleton<ClientSyncWebService>(new Server.ClientSyncWebService(MetadataSource, UpdateServiceConfiguration, ContentSource == null ? null : ContentRoot));
+            var clientSyncService = new Server.ClientSyncWebService(UpdateServiceConfiguration, ContentSource == null ? null : ContentRoot);
+            clientSyncService.SetMetadataSource(MetadataSource);
+            services.TryAddSingleton<ClientSyncWebService>(clientSyncService);
             services.TryAddSingleton<SimpleAuthenticationWebService>();
             services.TryAddSingleton<ReportingWebService>();
 

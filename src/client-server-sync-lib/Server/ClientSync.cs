@@ -14,6 +14,8 @@ using Microsoft.UpdateServices.ClientSync.DataModel;
 using System.Xml.Linq;
 using Microsoft.UpdateServices.Metadata.Content;
 using Microsoft.UpdateServices.Metadata.Prerequisites;
+using System.Threading;
+using System.ServiceModel;
 
 namespace Microsoft.UpdateServices.ClientSync.Server
 {
@@ -58,7 +60,9 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         /// <summary>
         /// The local repository from where updates are served.
         /// </summary>
-        private readonly IMetadataSource MetadataSource;
+        public IMetadataSource MetadataSource { get; private set; }
+
+        private ReaderWriterLockSlim MetadataSourceLock = new ReaderWriterLockSlim();
 
         /// <summary>
         /// Mapping of update index to its identity
@@ -89,45 +93,68 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         /// <summary>
         /// Instantiates a Windows Update server instance.
         /// </summary>
-        /// <param name="metadataSource">The source for updates metadata</param>
         /// <param name="updateServiceConfiguration">Update service configuration. Sent to clients when requested with GetConfig and GetConfig2</param>
         /// <param name="contentRoot">The content root to use when setting the download URL in updates metadata</param>
-        public ClientSyncWebService(IMetadataSource metadataSource, Config updateServiceConfiguration, string contentRoot)
+        public ClientSyncWebService(Config updateServiceConfiguration, string contentRoot)
         {
-            MetadataSource = metadataSource;
-
             ContentRoot = contentRoot;
 
             StartTime = DateTime.Now;
 
             UpdateServiceConfiguration = updateServiceConfiguration;
+        }
 
-            // Get leaf updates - updates that have prerequisites and no dependents
-            LeafUpdatesGuids = MetadataSource.GetLeafUpdates();
+        /// <summary>
+        /// Sets the source of update metadata
+        /// </summary>
+        /// <param name="metadataSource">The source for updates metadata</param>
+        public void SetMetadataSource(IMetadataSource metadataSource)
+        {
+            MetadataSourceLock.EnterWriteLock();
 
-            // Get non leaft updates: updates that have prerequisites and dependents
-            NonLeafUpdates = MetadataSource.GetNonLeafUpdates();
+            MetadataSource = metadataSource;
 
-            // Get root updates: updates that have no prerequisites
-            RootUpdates = MetadataSource.GetRootUpdates();
+            if (MetadataSource != null)
+            {
+                // Get leaf updates - updates that have prerequisites and no dependents
+                LeafUpdatesGuids = MetadataSource.GetLeafUpdates();
 
-            // Filter out leaf updates and only retain software ones
-            var leafSoftwareUpdates = MetadataSource.UpdatesIndex.Values.OfType<SoftwareUpdate>().GroupBy(u => u.Identity.ID).Select(k => k.Key).ToHashSet();
-            SoftwareLeafUpdateGuids = LeafUpdatesGuids.Where(g => leafSoftwareUpdates.Contains(g)).ToList();
+                // Get non leaft updates: updates that have prerequisites and dependents
+                NonLeafUpdates = MetadataSource.GetNonLeafUpdates();
 
-            // Get the mapping of update index to identity that is used in the metadata source.
-            MetadataSourceIndex = MetadataSource.GetIndex();
+                // Get root updates: updates that have no prerequisites
+                RootUpdates = MetadataSource.GetRootUpdates();
 
-            var latestRevisionSelector = MetadataSourceIndex
-                .ToDictionary(k => k.Value, v => v.Key)
-                .GroupBy(p => p.Key.ID)
-                .Select(group => group.OrderBy(g => g.Key.Revision).Last());
+                // Filter out leaf updates and only retain software ones
+                var leafSoftwareUpdates = MetadataSource.UpdatesIndex.Values.OfType<SoftwareUpdate>().GroupBy(u => u.Identity.ID).Select(k => k.Key).ToHashSet();
+                SoftwareLeafUpdateGuids = LeafUpdatesGuids.Where(g => leafSoftwareUpdates.Contains(g)).ToList();
 
-            // Create a mapping for index to update GUID
-            IdToRevisionMap = latestRevisionSelector.ToDictionary(k => k.Key.ID, v => v.Value);
+                // Get the mapping of update index to identity that is used in the metadata source.
+                MetadataSourceIndex = MetadataSource.GetIndex();
 
-            // Create a mapping from GUID to full identity
-            IdToFullIdentityMap = latestRevisionSelector.ToDictionary(k => k.Key.ID, v => v.Key);
+                var latestRevisionSelector = MetadataSourceIndex
+                    .ToDictionary(k => k.Value, v => v.Key)
+                    .GroupBy(p => p.Key.ID)
+                    .Select(group => group.OrderBy(g => g.Key.Revision).Last());
+
+                // Create a mapping for index to update GUID
+                IdToRevisionMap = latestRevisionSelector.ToDictionary(k => k.Key.ID, v => v.Value);
+
+                // Create a mapping from GUID to full identity
+                IdToFullIdentityMap = latestRevisionSelector.ToDictionary(k => k.Key.ID, v => v.Key);
+            }
+            else
+            {
+                LeafUpdatesGuids = null;
+                NonLeafUpdates = null;
+                RootUpdates = null;
+                SoftwareLeafUpdateGuids = null;
+                MetadataSourceIndex = null;
+                IdToRevisionMap = null;
+                IdToFullIdentityMap = null;
+            }
+
+            MetadataSourceLock.ExitWriteLock();
         }
 
         /// <summary>
@@ -259,6 +286,13 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         /// <returns>Extended update information response.</returns>
         public Task<ExtendedUpdateInfo> GetExtendedUpdateInfoAsync(Cookie cookie, int[] revisionIDs, XmlUpdateFragmentType[] infoTypes, string[] locales, string deviceAttributes)
         {
+            MetadataSourceLock.EnterReadLock();
+
+            if (MetadataSource == null)
+            {
+                throw new FaultException();
+            }
+
             List<Update> requestedUpdates = new List<Update>();
             foreach (var requestedRevision in revisionIDs)
             {
@@ -335,6 +369,8 @@ namespace Microsoft.UpdateServices.ClientSync.Server
             {
                 response.FileLocations = fileList.ToArray();
             }
+
+            MetadataSourceLock.ExitReadLock();
 
             return Task.FromResult(response);
         }
@@ -432,6 +468,13 @@ namespace Microsoft.UpdateServices.ClientSync.Server
 
         private Task<SyncInfo> DoSoftwareUpdateSync(SyncUpdateParameters parameters)
         {
+            MetadataSourceLock.EnterReadLock();
+
+            if (MetadataSource == null)
+            {
+                throw new FaultException();
+            }
+
             var installedNonLeafUpdatesGuids = GetInstalledNotLeafGuidsFromSyncParameters(parameters);
             var otherCachedUpdatesGuids = GetOtherCachedUpdateGuidsFromSyncParameters(parameters);
 
@@ -454,6 +497,8 @@ namespace Microsoft.UpdateServices.ClientSync.Server
                     }
                 }
             }
+
+            MetadataSourceLock.ExitReadLock();
 
             return Task.FromResult(response);
         }
