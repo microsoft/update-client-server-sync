@@ -26,11 +26,14 @@ namespace Microsoft.UpdateServices.ClientSync.DataModel
             "CreationDate",
             "IsPublic",
             "LegacyName",
-            "DetectoidType" };
+            "DetectoidType",
+            "OSUpgrade",
+            "PerUser"
+        };
 
         private static readonly string[] AttributesToKeepInCoreFragment =
         {
-            "UpdateType", "AutoSelectOnWebSites", "EulaID", "ExplicitlyDeployable"
+            "UpdateType", "AutoSelectOnWebSites", "EulaID", "ExplicitlyDeployable", "OSUpgrade"
         };
 
         /// <summary>
