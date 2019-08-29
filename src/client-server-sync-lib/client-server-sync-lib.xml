@@ -1230,7 +1230,7 @@
             </code>
             </example>
         </member>
-        <member name="F:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.MetadataSource">
+        <member name="P:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.MetadataSource">
             <summary>
             The local repository from where updates are served.
             </summary>
@@ -1241,13 +1241,18 @@
             Update indexes are used when communicating with clients, as they are smaller that full Identities
             </summary>
         </member>
-        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(Microsoft.UpdateServices.Storage.IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)">
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)">
             <summary>
             Instantiates a Windows Update server instance.
             </summary>
-            <param name="metadataSource">The source for updates metadata</param>
             <param name="updateServiceConfiguration">Update service configuration. Sent to clients when requested with GetConfig and GetConfig2</param>
             <param name="contentRoot">The content root to use when setting the download URL in updates metadata</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SetMetadataSource(Microsoft.UpdateServices.Storage.IMetadataSource)">
+            <summary>
+            Sets the source of update metadata
+            </summary>
+            <param name="metadataSource">The source for updates metadata</param>
         </member>
         <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfig2Async(Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration)">
             <summary>
