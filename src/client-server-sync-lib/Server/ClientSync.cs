@@ -9,11 +9,7 @@ using System.Linq;
 using Microsoft.UpdateServices.Metadata;
 using Microsoft.UpdateServices.WebServices.ClientSync;
 using System.IO;
-using Newtonsoft.Json;
 using Microsoft.UpdateServices.ClientSync.DataModel;
-using System.Xml.Linq;
-using Microsoft.UpdateServices.Metadata.Content;
-using Microsoft.UpdateServices.Metadata.Prerequisites;
 using System.Threading;
 using System.ServiceModel;
 
@@ -55,7 +51,7 @@ namespace Microsoft.UpdateServices.ClientSync.Server
     /// }
     /// </code>
     /// </example>
-    public class ClientSyncWebService : IClientSyncWebService
+    public partial class ClientSyncWebService : IClientSyncWebService
     {
         /// <summary>
         /// The local repository from where updates are served.
@@ -453,12 +449,7 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         {
             if (parameters.SkipSoftwareSync)
             {
-                return Task.FromResult(new SyncInfo()
-                {
-                    NewCookie = new Cookie() { Expiration = DateTime.Now.AddDays(5), EncryptedData = new byte[12] },
-                    DriverSyncNotNeeded = "false",
-                    Truncated = false
-                });
+                return DoDriversSync(parameters);   
             }
             else
             {
@@ -466,139 +457,29 @@ namespace Microsoft.UpdateServices.ClientSync.Server
             }
         }
 
-        private Task<SyncInfo> DoSoftwareUpdateSync(SyncUpdateParameters parameters)
+        
+
+        /// <summary>
+        /// Converts the a list of client supplied update indexes into a list of update identities
+        /// </summary>
+        /// <param name="clientIndexes">Client update indexes (ints)</param>
+        /// <returns>List of update identities that correspond to the client's indexes</returns>
+        private List<Identity> GetUpdateIdentitiesFromClientIndexes(int[] clientIndexes)
         {
-            MetadataSourceLock.EnterReadLock();
-
-            if (MetadataSource == null)
+            var updateIdentities = new List<Identity>();
+            if (clientIndexes != null)
             {
-                throw new FaultException();
-            }
-
-            var installedNonLeafUpdatesGuids = GetInstalledNotLeafGuidsFromSyncParameters(parameters);
-            var otherCachedUpdatesGuids = GetOtherCachedUpdateGuidsFromSyncParameters(parameters);
-
-            var response = new SyncInfo()
-            {
-                NewCookie = new Cookie() { Expiration = DateTime.Now.AddDays(5), EncryptedData = new byte[12] },
-                DriverSyncNotNeeded = "false"
-            };
-
-            AddMissingRootUpdatesToSyncUpdatesResponse(installedNonLeafUpdatesGuids, otherCachedUpdatesGuids, response, out bool rootUpdatesAdded);
-            if (!rootUpdatesAdded)
-            {
-                AddMissingNonLeafUpdatesToSyncUpdatesResponse(installedNonLeafUpdatesGuids, otherCachedUpdatesGuids, response, out bool nonLeafUpdatesAdded);
-                if (!nonLeafUpdatesAdded)
+                foreach (var nonLeafRevision in clientIndexes)
                 {
-                    AddMissingBundleUpdatesToSyncUpdatesResponse(installedNonLeafUpdatesGuids, otherCachedUpdatesGuids, response, out bool bundleUpdatesAdded);
-                    if (!bundleUpdatesAdded)
+                    if (!MetadataSourceIndex.TryGetValue(nonLeafRevision, out Identity nonLeafId))
                     {
-                        AddMissingSoftwareUpdatesToSyncUpdatesResponse(installedNonLeafUpdatesGuids, otherCachedUpdatesGuids, response, out bool softwareUpdatesAdded);
+                        throw new Exception("RevisionID not found");
                     }
+
+                    updateIdentities.Add(nonLeafId);
                 }
             }
-
-            MetadataSourceLock.ExitReadLock();
-
-            return Task.FromResult(response);
-        }
-
-        private void AddMissingRootUpdatesToSyncUpdatesResponse(List<Guid> installedNonLeaf, List<Guid> otherCached, SyncInfo response, out bool updatesAdded)
-        {
-            var missingRootUpdates = RootUpdates
-                .Except(installedNonLeaf)
-                .Except(otherCached)
-                .Where(guid => IdToFullIdentityMap.ContainsKey(guid))
-                .Select(guid => IdToFullIdentityMap[guid])
-                .Select(id => MetadataSource.CategoriesIndex[id])
-                .Where(u => !u.IsSuperseded)
-                .Take(MaxUpdatesInResponse + 1)
-                .ToList();
-
-            if (missingRootUpdates.Count > 0)
-            {
-                response.NewUpdates = CreateUpdateInfoListFromNonLeafUpdates(missingRootUpdates).ToArray();
-                response.Truncated = true;
-                updatesAdded = true;
-            }
-            else
-            {
-                updatesAdded = false;
-            }
-        }
-
-        private void AddMissingNonLeafUpdatesToSyncUpdatesResponse(List<Guid> installedNonLeaf, List<Guid> otherCached, SyncInfo response, out bool updatesAdded)
-        {
-            var missingNonLeafs = NonLeafUpdates
-                    .Except(installedNonLeaf)
-                    .Except(otherCached)
-                    .Where(guid => IdToFullIdentityMap.ContainsKey(guid))
-                    .Select(guid => IdToFullIdentityMap[guid])
-                    .Select(id => MetadataSource.CategoriesIndex.ContainsKey(id) ? MetadataSource.CategoriesIndex[id] : MetadataSource.UpdatesIndex[id])
-                    .Where(u => !u.IsSuperseded && u.IsApplicable(installedNonLeaf))
-                    .Take(MaxUpdatesInResponse + 1)
-                    .ToList();
-
-            if (missingNonLeafs.Count > 0)
-            {
-                response.NewUpdates = CreateUpdateInfoListFromNonLeafUpdates(missingNonLeafs).ToArray();
-                response.Truncated = true;
-                updatesAdded = true;
-            }
-            else
-            {
-                updatesAdded = false;
-            }
-        }
-
-        private void AddMissingBundleUpdatesToSyncUpdatesResponse(List<Guid> installedNonLeaf, List<Guid> otherCached, SyncInfo response, out bool updatesAdded)
-        {
-            var missingBundles = SoftwareLeafUpdateGuids
-                        .Except(installedNonLeaf)
-                        .Except(otherCached)
-                        .Where(guid => IdToFullIdentityMap.ContainsKey(guid))
-                        .Select(guid => IdToFullIdentityMap[guid])
-                        .Select(id => MetadataSource.UpdatesIndex[id])
-                        .OfType<SoftwareUpdate>()
-                        .Where(u => !u.IsSuperseded && u.IsApplicable(installedNonLeaf) && u.IsBundle)
-                        .Take(MaxUpdatesInResponse + 1)
-                        .ToList();
-
-            if (missingBundles.Count > 0)
-            {
-                response.NewUpdates = CreateUpdateInfoListFromSoftwareUpdate(missingBundles).ToArray();
-                response.Truncated = true;
-                updatesAdded = true;
-            }
-            else
-            {
-                updatesAdded = false;
-            }
-        }
-
-        private void AddMissingSoftwareUpdatesToSyncUpdatesResponse(List<Guid> installedNonLeaf, List<Guid> otherCached, SyncInfo response, out bool updatesAdded)
-        {
-            var missingApplicableUpdates = SoftwareLeafUpdateGuids
-                .Except(installedNonLeaf)
-                .Except(otherCached)
-                .Select(guid => IdToFullIdentityMap[guid])
-                .Select(id => MetadataSource.UpdatesIndex[id])
-                .OfType<SoftwareUpdate>()
-                .Where(u => !u.IsSuperseded && u.IsApplicable(installedNonLeaf) && !u.IsBundle)
-                .Take(MaxUpdatesInResponse + 1)
-                .ToList();
-
-            response.Truncated = missingApplicableUpdates.Count > MaxUpdatesInResponse;
-
-            if (missingApplicableUpdates.Count > 0)
-            {
-                response.NewUpdates = CreateUpdateInfoListFromSoftwareUpdate(missingApplicableUpdates).ToArray();
-                updatesAdded = true;
-            }
-            else
-            {
-                updatesAdded = false;
-            }
+            return updateIdentities;
         }
 
         /// <summary>
@@ -608,21 +489,9 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         /// <returns>List of update GUIDs</returns>
         private List<Guid> GetInstalledNotLeafGuidsFromSyncParameters(SyncUpdateParameters parameters)
         {
-            var installedNonLeafUpdates = new List<Identity>();
-            List<Guid> installedNonLeafUpdatesGuids = new List<Guid>();
-            if (parameters.InstalledNonLeafUpdateIDs != null)
-            {
-                foreach (var nonLeafRevision in parameters.InstalledNonLeafUpdateIDs)
-                {
-                    if (!MetadataSourceIndex.TryGetValue(nonLeafRevision, out Identity nonLeafId))
-                    {
-                        throw new Exception("RevisionID not found");
-                    }
-
-                    installedNonLeafUpdates.Add(nonLeafId);
-                }
-            }
-            return installedNonLeafUpdates.Select(u => u.ID).ToList();
+            return GetUpdateIdentitiesFromClientIndexes(parameters.InstalledNonLeafUpdateIDs)
+                .Select(u => u.ID)
+                .ToList();
         }
 
         /// <summary>
@@ -632,110 +501,9 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         /// <returns>List of update GUIDs</returns>
         private List<Guid> GetOtherCachedUpdateGuidsFromSyncParameters(SyncUpdateParameters parameters)
         {
-            var otherCachedUpdates = new List<Identity>();
-            List<Guid> otherCachedUpdatesGuids = new List<Guid>();
-            if (parameters.OtherCachedUpdateIDs != null)
-            {
-                foreach (var otherCachedRevision in parameters.OtherCachedUpdateIDs)
-                {
-                    if (!MetadataSourceIndex.TryGetValue(otherCachedRevision, out Identity cachedRevisionId))
-                    {
-                        throw new Exception("RevisionID not found");
-                    }
-
-                    otherCachedUpdates.Add(cachedRevisionId);
-                }
-            }
-            return otherCachedUpdates.Select(u => u.ID).ToList();
-        }
-
-        /// <summary>
-        /// Creates a list of updates to be sent to the client, based on the specified list of software updates.
-        /// The update information sent to the client contains a deployment field and a core XML fragment extracted
-        /// from the full metadata of the update
-        /// </summary>
-        /// <param name="softwareUpdates">List of software updates to send to the client</param>
-        /// <returns>List of updates that can be appended to a SyncUpdates SOAP response to a client</returns>
-        private List<UpdateInfo> CreateUpdateInfoListFromSoftwareUpdate(List<SoftwareUpdate> softwareUpdates)
-        {
-            var returnListLength = Math.Min(MaxUpdatesInResponse, softwareUpdates.Count);
-            var returnList = new List<UpdateInfo>(returnListLength);
-
-            for (int i = 0; i < returnListLength; i++)
-            {
-                // Get the update index; it will be sent to the client
-                var revision = IdToRevisionMap[softwareUpdates[i].Identity.ID];
-
-                // Generate the core XML fragment
-                var identity = softwareUpdates[i].Identity;
-                var coreXml = GetCoreFragment(identity);
-
-                // Add the update information to the return array
-                returnList.Add(new UpdateInfo()
-                {
-                    Deployment = new Deployment()
-                    {
-                        // Action is Install for bundles of updates that are not part of a bundle
-                        // Action is Bundle for updates that are part of a bundle
-                        Action = (softwareUpdates[i].IsBundle || !softwareUpdates[i].IsBundled) ? DeploymentAction.Install : DeploymentAction.Bundle,
-                        ID = softwareUpdates[i].IsBundle ? 20000 : (softwareUpdates[i].IsBundled? 20001 : 20002),
-                        AutoDownload = "0",
-                        AutoSelect = "0",
-                        SupersedenceBehavior = "0",
-                        IsAssigned = true,
-                        LastChangeTime = "2019-08-06"
-                    },
-                    IsLeaf = true,
-                    ID = revision,
-                    IsShared = false,
-                    Verification = null,
-                    Xml = coreXml
-                });
-            }
-
-            return returnList;
-        }
-
-        /// <summary>
-        /// Creates a list of updates to be sent to the client, based on the specified list of category updates.
-        /// The update information sent to the client contains a deployment field and a core XML fragment extracted
-        /// from the full metadata of the update
-        /// </summary>
-        /// <param name="nonLeafUpdates">List of non-software updates to send to the client. These are usually detectoids, categories and classifications</param>
-        /// <returns>List of updates that can be appended to a SyncUpdates SOAP response to a client</returns>
-        private List<UpdateInfo> CreateUpdateInfoListFromNonLeafUpdates(List<Update> nonLeafUpdates)
-        {
-            var returnListLength = Math.Min(MaxUpdatesInResponse, nonLeafUpdates.Count);
-            var returnList = new List<UpdateInfo>(returnListLength);
-
-            for (int i = 0; i < returnListLength; i++)
-            {
-                var revision = IdToRevisionMap[nonLeafUpdates[i].Identity.ID];
-
-                var identity = nonLeafUpdates[i].Identity;
-                var coreXml = GetCoreFragment(identity);
-
-                returnList.Add(new UpdateInfo()
-                {
-                    Deployment = new Deployment()
-                    {
-                        Action = DeploymentAction.Evaluate,
-                        ID = 15000,
-                        AutoDownload = "0",
-                        AutoSelect = "0",
-                        SupersedenceBehavior = "0",
-                        IsAssigned = true,
-                        LastChangeTime = "2019-08-06"
-                    },
-                    IsLeaf = false,
-                    ID = revision,
-                    IsShared = false,
-                    Verification = null,
-                    Xml = coreXml
-                });
-            }
-
-            return returnList;
+            return GetUpdateIdentitiesFromClientIndexes(parameters.OtherCachedUpdateIDs)
+                .Select(u => u.ID)
+                .ToList();
         }
     }
 }

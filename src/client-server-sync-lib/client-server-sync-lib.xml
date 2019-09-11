@@ -1360,6 +1360,13 @@
             <param name="parameters">Request parameters: list of installed updates, list of known updates, etc.</param>
             <returns>SyncInfo containing updates applicable to the caller.</returns>
         </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetUpdateIdentitiesFromClientIndexes(System.Int32[])">
+            <summary>
+            Converts the a list of client supplied update indexes into a list of update identities
+            </summary>
+            <param name="clientIndexes">Client update indexes (ints)</param>
+            <returns>List of update identities that correspond to the client's indexes</returns>
+        </member>
         <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetInstalledNotLeafGuidsFromSyncParameters(Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">
             <summary>
             Extract installed non-leaf updates from the response and maps them to a GUID
@@ -1373,6 +1380,66 @@
             </summary>
             <param name="parameters">Sync parameters</param>
             <returns>List of update GUIDs</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.DoDriversSync(Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">
+            <summary>
+            Handle driver sync requests
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.IsInstalledDriverBetterMatch(Microsoft.UpdateServices.WebServices.ClientSync.InstalledDriver,Microsoft.UpdateServices.Storage.DriverMatchResult,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Guid})">
+            <summary>
+            Check if the currently installed driver is a better match than the best driver we found in the updates source
+            </summary>
+            <param name="installedDriver">The installed driver</param>
+            <param name="matchResult">The best driver match found in the updates source</param>
+            <param name="hardwareIdList">The list of hardware ids for the device</param>
+            <param name="computerHardwareIds">List of computer hardware ids</param>
+            <returns>True if the installed driver is a better match, false otherwise</returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.DoSoftwareUpdateSync(Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">
+            <summary>
+            Handle software sync request from a client
+            </summary>
+            <param name="parameters">Sync parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddMissingRootUpdatesToSyncUpdatesResponse(System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.Guid},Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo,System.Boolean@)">
+            <summary>
+            For a client request, gathers applicable root updates (detectoids, categories, etc.) that the client does not have yet
+            </summary>
+            <param name="installedNonLeaf">List of non leaf updates installed on the client</param>
+            <param name="otherCached">List of other updates known to the client</param>
+            <param name="response">The response  to append new updates to</param>
+            <param name="updatesAdded">On return: true of updates were added to the response, false otherwise</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddMissingNonLeafUpdatesToSyncUpdatesResponse(System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.Guid},Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo,System.Boolean@)">
+            <summary>
+            For a client request, gathers applicable software updates that are not leafs in the prerequisite tree; 
+            </summary>
+            <param name="installedNonLeaf">List of non leaf updates installed on the client</param>
+            <param name="otherCached">List of other updates known to the client</param>
+            <param name="response">The response  to append new updates to</param>
+            <param name="updatesAdded">On return: true of updates were added to the response, false otherwise</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddMissingBundleUpdatesToSyncUpdatesResponse(System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.Guid},Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo,System.Boolean@)">
+            <summary>
+            For a client request, gathers applicable leaf bundle updates that the client does not have yet
+            </summary>
+            <param name="installedNonLeaf">List of non leaf updates installed on the client</param>
+            <param name="otherCached">List of other updates known to the client</param>
+            <param name="response">The response  to append new updates to</param>
+            <param name="updatesAdded">On return: true of updates were added to the response, false otherwise</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddMissingSoftwareUpdatesToSyncUpdatesResponse(System.Collections.Generic.List{System.Guid},System.Collections.Generic.List{System.Guid},Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo,System.Boolean@)">
+            <summary>
+            For a client sync request, gathers applicable software updates that the client does not have yet
+            </summary>
+            <param name="installedNonLeaf">List of non leaf updates installed on the client</param>
+            <param name="otherCached">List of other updates known to the client</param>
+            <param name="response">The response  to append new updates to</param>
+            <param name="updatesAdded">On return: true of updates were added to the response, false otherwise</param>
         </member>
         <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.CreateUpdateInfoListFromSoftwareUpdate(System.Collections.Generic.List{Microsoft.UpdateServices.Metadata.SoftwareUpdate})">
             <summary>

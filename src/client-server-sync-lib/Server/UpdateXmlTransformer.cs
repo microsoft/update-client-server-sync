@@ -55,7 +55,20 @@ namespace Microsoft.UpdateServices.ClientSync.DataModel
             var relationships = xml.Root.XPathSelectElements("/Update/Relationships").FirstOrDefault();
             var applicabilityRules = xml.Root.XPathSelectElements("/Update/ApplicabilityRules").FirstOrDefault();
 
+            if (applicabilityRules != null)
+            {
+                RemoveDriverMetadataNodes(applicabilityRules);
+            }
+
             return identity.ToString(SaveOptions.DisableFormatting) + filteredProperties.ToString(SaveOptions.DisableFormatting) + relationships?.ToString(SaveOptions.DisableFormatting) + applicabilityRules?.ToString(SaveOptions.DisableFormatting);
+        }
+
+        private static void RemoveDriverMetadataNodes(XElement element)
+        {
+            foreach(var driverMetadataElement in element.XPathSelectElements("/Update/ApplicabilityRules/Metadata/d.WindowsDriverMetaData"))
+            {
+                driverMetadataElement.RemoveNodes();
+            }
         }
 
         private static XElement FilterElementAttributes(XElement element, string[] attributesToKeep)
