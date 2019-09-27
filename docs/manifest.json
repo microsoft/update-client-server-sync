@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/src/update-client-server-sync/docfx",
+  "source_base_path": "E:/src/update-client-server-sync/docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,10 +9,22 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncContentController.html",
-          "hash": "6aNNaG6P9pQfQiZUHpwmAA=="
+          "hash": "rOrRoO4c5NVvTSdzvmOd0A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.UnApprovedUpdatesRequestedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.UnApprovedUpdatesRequestedDelegate.html",
+          "hash": "Yrmey/8UsZjE/7iHhAFc9Q=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.html",
-          "hash": "WSkiihQnDWY8r6kBHKdlGQ=="
+          "hash": "hUNZQgGfQr+yTtQ02PYSig=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.ReportingWebService.html",
-          "hash": "OjVaC3p1EPI7iE15wGd9zw=="
+          "hash": "inZM3BqXLyC8C4Ize8e2nQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.SimpleAuthenticationWebService.html",
-          "hash": "5QFqZ92FVV7CHye2xlhJ0Q=="
+          "hash": "+Sv5h2T4CJ2u/HS+rgxsgw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.UpdateServerStartup.html",
-          "hash": "c/ja0V6i11aSonYrLc3AxA=="
+          "hash": "fdunLWzJIG9adkvd4dQeNw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.UpdateServices.ClientSync.Server.html",
-          "hash": "/P9sbj/JN6+WuOPVItn75w=="
+          "hash": "r3G/d3lg8PozzCpia8IHtA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -84,10 +96,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "RRocYrf7YRPoloT281v1nA=="
+          "hash": "lmVMI+RNqOI7OWcsrKBj8Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -96,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "V9iVQBEHCV6jbV2ggEpJ9Q=="
+          "hash": "uiV+LacgDUv3KgdzqQkHaA=="
         }
       },
       "is_incremental": false,
@@ -108,10 +120,10 @@
       "output": {
         ".html": {
           "relative_path": "examples/custom_startup.html",
-          "hash": "2+HNFrXDjagvGAIZDSkJTA=="
+          "hash": "ZjTlqPY7lMHsQYtW3pwQ8w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -120,10 +132,10 @@
       "output": {
         ".html": {
           "relative_path": "examples/default_startup.html",
-          "hash": "DP19Ku94sopwPp5xOHRdMw=="
+          "hash": "GO0qyrqpCPC4WnroB5dehQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -150,7 +162,7 @@
           "hash": "QGWboM18kQR3qKlK5jdrog=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -175,24 +187,24 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 4,
-          "skipped_file_count": 4
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 6,
-          "skipped_file_count": 6
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 7,
+          "skipped_file_count": 3
         }
       }
     },

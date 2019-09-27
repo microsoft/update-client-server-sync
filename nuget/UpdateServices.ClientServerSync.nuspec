@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>UpdateServices.ClientServerSync</id>
-    <version>1.5.0</version>
+    <version>1.6.1</version>
     <title>Microsoft Update Services: Client-Server Sync</title>
     <summary>Sample implementation of the Windows Update protocol in a ASP.NET Core service</summary>
     <authors>Cristian Petruta</authors>
@@ -11,7 +11,7 @@
     <license type="expression">MIT</license>
     <projectUrl>https://microsoft.github.io/update-client-server-sync/</projectUrl>
     <description>Sample implementation of the Windows Update protocol in a ASP.NET Core service</description>
-    <releaseNotes>Implement sync'ing of driver updates.</releaseNotes>
+    <releaseNotes>Add ability to approve the updates that are offered to connecting clients PCs.</releaseNotes>
     <tags>Windows Update WSUS WU MS-WSUSSS MS-WUSP</tags>
     <repository type="GIT" url="https://github.com/microsoft/update-client-server-sync" />
     <dependencies>
@@ -20,7 +20,7 @@
         <dependency id="System.ServiceModel.Http" version="4.5.3" exclude="Build,Analyzers" />
         <dependency id="System.ServiceModel.NetTcp" version="4.5.3" exclude="Build,Analyzers" />
         <dependency id="System.ServiceModel.Security" version="4.5.3" exclude="Build,Analyzers" />
-        <dependency id="UpdateServices.ServerServerSync" version="2.5.3" exclude="Build,Analyzers" />
+        <dependency id="UpdateServices.ServerServerSync" version="2.5.6" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>

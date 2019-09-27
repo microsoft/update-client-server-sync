@@ -142,20 +142,29 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         /// <param name="updatesAdded">On return: true of updates were added to the response, false otherwise</param>
         private void AddMissingBundleUpdatesToSyncUpdatesResponse(List<Guid> installedNonLeaf, List<Guid> otherCached, SyncInfo response, out bool updatesAdded)
         {
-            var missingBundles = SoftwareLeafUpdateGuids
-                        .Except(installedNonLeaf)                               // Do not resend installed updates
-                        .Except(otherCached)                                    // Do not resend other client known updates
-                        .Where(guid => IdToFullIdentityMap.ContainsKey(guid))
-                        .Select(guid => IdToFullIdentityMap[guid])              // Map the GUID to a fully qualified identity
-                        .Select(id => MetadataSource.UpdatesIndex[id])          // Select the software update by identity
-                        .OfType<SoftwareUpdate>()
-                        .Where(u => !u.IsSuperseded && u.IsApplicable(installedNonLeaf) && u.IsBundle)  // Remove superseded, not applicable and not bundles
-                        .Take(MaxUpdatesInResponse + 1)                         // Only take the maximum number of updates allowed + 1 (to see if we truncated)
-                        .ToList();
+            var allMissingBundles = SoftwareLeafUpdateGuids
+                .Except(installedNonLeaf)                               // Do not resend installed updates
+                .Except(otherCached)                                    // Do not resend other client known updates
+                .Where(guid => IdToFullIdentityMap.ContainsKey(guid))
+                .Select(guid => IdToFullIdentityMap[guid])              // Map the GUID to a fully qualified identity
+                .Select(id => MetadataSource.UpdatesIndex[id])          // Select the software update by identity
+                .OfType<SoftwareUpdate>()
+                .Where(u => !u.IsSuperseded && u.IsApplicable(installedNonLeaf) && u.IsBundle);  // Remove superseded, not applicable and not bundles
 
-            if (missingBundles.Count > 0)
+            var unapprovedMissingBundles = allMissingBundles.Where(u => !ApprovedSoftwareUpdates.Contains(u.Identity));
+            if (unapprovedMissingBundles.Count() > 0)
             {
-                response.NewUpdates = CreateUpdateInfoListFromSoftwareUpdate(missingBundles).ToArray();
+                OnUnApprovedSoftwareUpdatesRequested?.Invoke(unapprovedMissingBundles);
+            }
+
+            var approvedMissingBundles = allMissingBundles
+                .Where(u => ApprovedSoftwareUpdates.Contains(u.Identity))
+                .Take(MaxUpdatesInResponse + 1)   // Only take the maximum number of updates allowed + 1 (to see if we truncated)
+                .ToList();
+
+            if (approvedMissingBundles.Count > 0)
+            {
+                response.NewUpdates = CreateUpdateInfoListFromSoftwareUpdate(approvedMissingBundles).ToArray();
                 response.Truncated = true;
                 updatesAdded = true;
             }
@@ -174,13 +183,24 @@ namespace Microsoft.UpdateServices.ClientSync.Server
         /// <param name="updatesAdded">On return: true of updates were added to the response, false otherwise</param>
         private void AddMissingSoftwareUpdatesToSyncUpdatesResponse(List<Guid> installedNonLeaf, List<Guid> otherCached, SyncInfo response, out bool updatesAdded)
         {
-            var missingApplicableUpdates = SoftwareLeafUpdateGuids
+            var allMissingApplicableUpdates = SoftwareLeafUpdateGuids
                 .Except(installedNonLeaf)                               // Do not resend installed updates
                 .Except(otherCached)                                    // Do not resend other client known updates
                 .Select(guid => IdToFullIdentityMap[guid])              // Map the GUID to a fully qualified identity
                 .Select(id => MetadataSource.UpdatesIndex[id])          // Select the software update by identity
                 .OfType<SoftwareUpdate>()
-                .Where(u => !u.IsSuperseded && u.IsApplicable(installedNonLeaf) && !u.IsBundle) // Remove superseded, not applicable and bundles
+                .Where(u => !u.IsSuperseded && u.IsApplicable(installedNonLeaf) && !u.IsBundle); // Remove superseded, not applicable and bundles
+
+            var unapprovedMissingUpdates = allMissingApplicableUpdates
+                .Where(u => !ApprovedSoftwareUpdates.Contains(u.Identity) && (!u.IsBundled || !u.BundleParent.Any(i => ApprovedSoftwareUpdates.Contains(i))));
+
+            if (unapprovedMissingUpdates.Count() > 0)
+            {
+                OnUnApprovedSoftwareUpdatesRequested?.Invoke(unapprovedMissingUpdates);
+            }
+
+            var missingApplicableUpdates = allMissingApplicableUpdates
+                .Where(u => ApprovedSoftwareUpdates.Contains(u.Identity) || (u.IsBundled && u.BundleParent.Any(i => ApprovedSoftwareUpdates.Contains(i))))    // The update is approved or it's part of a bundle that is approved
                 .Take(MaxUpdatesInResponse + 1)                         // Only take the maximum number of updates allowed + 1 (to see if we truncated)
                 .ToList();
 

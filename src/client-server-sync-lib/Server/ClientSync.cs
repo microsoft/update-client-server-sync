@@ -98,6 +98,9 @@ namespace Microsoft.UpdateServices.ClientSync.Server
             StartTime = DateTime.Now;
 
             UpdateServiceConfiguration = updateServiceConfiguration;
+
+            ApprovedSoftwareUpdates = new HashSet<Identity>();
+            ApprovedDriverUpdates = new HashSet<Identity>();
         }
 
         /// <summary>

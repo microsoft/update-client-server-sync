@@ -85,7 +85,7 @@
   <h6><strong>Assembly</strong>: client-server-sync-lib.dll</h6>
   <h5 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ClientSyncWebService : object, IClientSyncWebService</code></pre>
+    <pre><code class="lang-csharp hljs">public class ClientSyncWebService : IClientSyncWebService</code></pre>
   </div>
   <h5 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_examples"><strong>Examples</strong></h5>
   <p>Attach this service to your ASP.NET service using SoapCore:</p>
@@ -120,21 +120,16 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_IMetadataSource_Microsoft_UpdateServices_WebServices_ClientSync_Config_System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.%23ctor(IMetadataSource%2CMicrosoft.UpdateServices.WebServices.ClientSync.Config%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L95">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_IMetadataSource_Microsoft_UpdateServices_WebServices_ClientSync_Config_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(IMetadataSource,Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)">ClientSyncWebService(IMetadataSource, Config, String)</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService__ctor_Microsoft_UpdateServices_WebServices_ClientSync_Config_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.#ctor(Microsoft.UpdateServices.WebServices.ClientSync.Config,System.String)">ClientSyncWebService(Config, String)</h4>
   <div class="markdown level1 summary"><p>Instantiates a Windows Update server instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClientSyncWebService(IMetadataSource metadataSource, Config updateServiceConfiguration, string contentRoot)</code></pre>
+    <pre><code class="lang-csharp hljs">public ClientSyncWebService(Config updateServiceConfiguration, string contentRoot)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,12 +141,6 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">IMetadataSource</span></td>
-        <td><span class="parametername">metadataSource</span></td>
-        <td><p>The source for updates metadata</p>
-</td>
-      </tr>
       <tr>
         <td><span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span></td>
         <td><span class="parametername">updateServiceConfiguration</span></td>
@@ -166,15 +155,181 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_MetadataSource_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.MetadataSource*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_MetadataSource" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.MetadataSource">MetadataSource</h4>
+  <div class="markdown level1 summary"><p>The local repository from where updates are served.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMetadataSource MetadataSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.Storage.IMetadataSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfig2Async_Microsoft_UpdateServices_WebServices_ClientSync_ClientConfiguration_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfig2Async(Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L138">View Source</a>
-  </span>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedDriverUpdate_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedDriverUpdate*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedDriverUpdate_Microsoft_UpdateServices_Metadata_Identity_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedDriverUpdate(Microsoft.UpdateServices.Metadata.Identity)">AddApprovedDriverUpdate(Identity)</h4>
+  <div class="markdown level1 summary"><p>Adds an update identities to the list of approved driver updates.
+Approved updates are made available to clients connecting to this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddApprovedDriverUpdate(Identity approvedUpdate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.Metadata.Identity</span></td>
+        <td><span class="parametername">approvedUpdate</span></td>
+        <td><p>Approved driver update</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedDriverUpdates_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedDriverUpdates*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedDriverUpdates_System_Collections_Generic_IEnumerable_Microsoft_UpdateServices_Metadata_Identity__" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedDriverUpdates(System.Collections.Generic.IEnumerable{Microsoft.UpdateServices.Metadata.Identity})">AddApprovedDriverUpdates(IEnumerable&lt;Identity&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a list of update identities to the list of approved driver updates.
+Approved updates are made available to clients connecting to this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddApprovedDriverUpdates(IEnumerable&lt;Identity&gt; approvedUpdates)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Microsoft.UpdateServices.Metadata.Identity</span>&gt;</td>
+        <td><span class="parametername">approvedUpdates</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedSoftwareUpdate_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedSoftwareUpdate*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedSoftwareUpdate_Microsoft_UpdateServices_Metadata_Identity_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedSoftwareUpdate(Microsoft.UpdateServices.Metadata.Identity)">AddApprovedSoftwareUpdate(Identity)</h4>
+  <div class="markdown level1 summary"><p>Adds an update identity to the list of approved software updates.
+Approved updates are made available to clients connecting to this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddApprovedSoftwareUpdate(Identity approvedUpdate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.Metadata.Identity</span></td>
+        <td><span class="parametername">approvedUpdate</span></td>
+        <td><p>Approved update</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedSoftwareUpdates_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedSoftwareUpdates*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_AddApprovedSoftwareUpdates_System_Collections_Generic_IEnumerable_Microsoft_UpdateServices_Metadata_Identity__" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedSoftwareUpdates(System.Collections.Generic.IEnumerable{Microsoft.UpdateServices.Metadata.Identity})">AddApprovedSoftwareUpdates(IEnumerable&lt;Identity&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a list of update identities to the list of approved software updates.
+Approved updates are made available to clients connecting to this service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddApprovedSoftwareUpdates(IEnumerable&lt;Identity&gt; approvedUpdates)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Microsoft.UpdateServices.Metadata.Identity</span>&gt;</td>
+        <td><span class="parametername">approvedUpdates</span></td>
+        <td><p>List of approved updates</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_ClearApprovedDriverUpdates_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClearApprovedDriverUpdates*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_ClearApprovedDriverUpdates" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClearApprovedDriverUpdates">ClearApprovedDriverUpdates()</h4>
+  <div class="markdown level1 summary"><p>Clears the list of approved driver updates.
+Un-approved updates are not made available to connecting clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearApprovedDriverUpdates()</code></pre>
+  </div>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_ClearApprovedSoftwareUpdates_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClearApprovedSoftwareUpdates*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_ClearApprovedSoftwareUpdates" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClearApprovedSoftwareUpdates">ClearApprovedSoftwareUpdates()</h4>
+  <div class="markdown level1 summary"><p>Clears the list of approved software updates.
+Un-approved updates are not made available to connecting clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearApprovedSoftwareUpdates()</code></pre>
+  </div>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfig2Async_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfig2Async*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfig2Async_Microsoft_UpdateServices_WebServices_ClientSync_ClientConfiguration_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfig2Async(Microsoft.UpdateServices.WebServices.ClientSync.ClientConfiguration)">GetConfig2Async(ClientConfiguration)</h4>
   <div class="markdown level1 summary"><p>Handle get configuration requests from clients</p>
@@ -212,19 +367,14 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span>&gt;</td>
         <td><p>The server configuration to be sent to a Windows client</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfigAsync_System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfigAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L169">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfigAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfigAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetConfigAsync_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetConfigAsync(System.String)">GetConfigAsync(String)</h4>
   <div class="markdown level1 summary"><p>Handle get configuration requests from clients</p>
@@ -262,21 +412,16 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Config</span>&gt;</td>
         <td><p>The server configuration to be sent to a Windows client</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_Microsoft_UpdateServices_WebServices_ClientSync_AuthorizationCookie___Microsoft_UpdateServices_WebServices_ClientSync_Cookie_DateTime_DateTime_System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie%5B%5D%2CMicrosoft.UpdateServices.WebServices.ClientSync.Cookie%2CDateTime%2CDateTime%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L204">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync*"></a>
-  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_Microsoft_UpdateServices_WebServices_ClientSync_AuthorizationCookie___Microsoft_UpdateServices_WebServices_ClientSync_Cookie_DateTime_DateTime_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,DateTime,DateTime,System.String)">GetCookieAsync(AuthorizationCookie[], Cookie, DateTime, DateTime, String)</h4>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetCookieAsync_Microsoft_UpdateServices_WebServices_ClientSync_AuthorizationCookie___Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_DateTime_System_DateTime_System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetCookieAsync(Microsoft.UpdateServices.WebServices.ClientSync.AuthorizationCookie[],Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.DateTime,System.DateTime,System.String)">GetCookieAsync(AuthorizationCookie[], Cookie, DateTime, DateTime, String)</h4>
   <div class="markdown level1 summary"><p>Handle get cookie requests. All requests are all granted access and a cookie is issued.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -307,12 +452,12 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><span class="xref">System.DateTime</span></td>
         <td><span class="parametername">lastChange</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><span class="xref">System.DateTime</span></td>
         <td><span class="parametername">currentTime</span></td>
         <td></td>
       </tr>
@@ -334,19 +479,14 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.Cookie</span>&gt;</td>
         <td><p>A new cookie</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfo2Async_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_UpdateIdentity___Microsoft_UpdateServices_WebServices_ClientSync_XmlUpdateFragmentType___System_String___System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfo2Async(Microsoft.UpdateServices.WebServices.ClientSync.Cookie%2CMicrosoft.UpdateServices.WebServices.ClientSync.UpdateIdentity%5B%5D%2CMicrosoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType%5B%5D%2CSystem.String%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L218">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfo2Async_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfo2Async*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfo2Async_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_UpdateIdentity___Microsoft_UpdateServices_WebServices_ClientSync_XmlUpdateFragmentType___System_String___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfo2Async(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity[],Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType[],System.String[],System.String)">GetExtendedUpdateInfo2Async(Cookie, UpdateIdentity[], XmlUpdateFragmentType[], String[], String)</h4>
   <div class="markdown level1 summary"><p>Not implemented.</p>
@@ -408,19 +548,14 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo2</span>&gt;</td>
         <td><p>Not implemented</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfoAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Int32___Microsoft_UpdateServices_WebServices_ClientSync_XmlUpdateFragmentType___System_String___System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfoAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie%2CSystem.Int32%5B%5D%2CMicrosoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType%5B%5D%2CSystem.String%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L260">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfoAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfoAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetExtendedUpdateInfoAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Int32___Microsoft_UpdateServices_WebServices_ClientSync_XmlUpdateFragmentType___System_String___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetExtendedUpdateInfoAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Int32[],Microsoft.UpdateServices.WebServices.ClientSync.XmlUpdateFragmentType[],System.String[],System.String)">GetExtendedUpdateInfoAsync(Cookie, Int32[], XmlUpdateFragmentType[], String[], String)</h4>
   <div class="markdown level1 summary"><p>Handle requests for extended update information. The extended information is extracted from update metadata.
@@ -483,19 +618,14 @@ Extended information also includes file URLs</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.ExtendedUpdateInfo</span>&gt;</td>
         <td><p>Extended update information response.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetFileLocationsAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Byte_____.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetFileLocationsAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie%2CSystem.Byte%5B%5D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L348">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetFileLocationsAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetFileLocationsAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetFileLocationsAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Byte_____" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetFileLocationsAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Byte[][])">GetFileLocationsAsync(Cookie, Byte[][])</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -537,19 +667,14 @@ Extended information also includes file URLs</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.GetFileLocationsResults</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.GetFileLocationsResults</span>&gt;</td>
         <td><p>Not implemented</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetTimestampsAsync_Microsoft_UpdateServices_WebServices_ClientSync_GetTimestampsRequest_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetTimestampsAsync(Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L358">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetTimestampsAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetTimestampsAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_GetTimestampsAsync_Microsoft_UpdateServices_WebServices_ClientSync_GetTimestampsRequest_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.GetTimestampsAsync(Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsRequest)">GetTimestampsAsync(GetTimestampsRequest)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -586,19 +711,14 @@ Extended information also includes file URLs</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsResponse</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.GetTimestampsResponse</span>&gt;</td>
         <td><p>Not implemented</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RefreshCacheAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_UpdateIdentity___System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RefreshCacheAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie%2CMicrosoft.UpdateServices.WebServices.ClientSync.UpdateIdentity%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L370">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RefreshCacheAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RefreshCacheAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RefreshCacheAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_UpdateIdentity___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RefreshCacheAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.UpdateIdentity[],System.String)">RefreshCacheAsync(Cookie, UpdateIdentity[], String)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -645,19 +765,14 @@ Extended information also includes file URLs</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult</span>[]&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.RefreshCacheResult</span>[]&gt;</td>
         <td><p>Not implemented</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RegisterComputerAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_ComputerInfo_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RegisterComputerAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie%2CMicrosoft.UpdateServices.WebServices.ClientSync.ComputerInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L381">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RegisterComputerAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RegisterComputerAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RegisterComputerAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_ComputerInfo_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RegisterComputerAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.ComputerInfo)">RegisterComputerAsync(Cookie, ComputerInfo)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -699,19 +814,103 @@ Extended information also includes file URLs</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td><p>Not implemented</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_StartCategoryScanAsync_Microsoft_UpdateServices_WebServices_ClientSync_StartCategoryScanRequest_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.StartCategoryScanAsync(Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L391">View Source</a>
-  </span>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RemoveApprovedDriverUpdate_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RemoveApprovedDriverUpdate*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RemoveApprovedDriverUpdate_Microsoft_UpdateServices_Metadata_Identity_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RemoveApprovedDriverUpdate(Microsoft.UpdateServices.Metadata.Identity)">RemoveApprovedDriverUpdate(Identity)</h4>
+  <div class="markdown level1 summary"><p>Removes an approved software update from the list of approved software updates.
+The software update will not be given to connecting clients anymore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveApprovedDriverUpdate(Identity updateIdentity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.Metadata.Identity</span></td>
+        <td><span class="parametername">updateIdentity</span></td>
+        <td><p>Identity of update to un-approve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RemoveApprovedSoftwareUpdate_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RemoveApprovedSoftwareUpdate*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_RemoveApprovedSoftwareUpdate_Microsoft_UpdateServices_Metadata_Identity_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RemoveApprovedSoftwareUpdate(Microsoft.UpdateServices.Metadata.Identity)">RemoveApprovedSoftwareUpdate(Identity)</h4>
+  <div class="markdown level1 summary"><p>Removes an approved software update from the list of approved software updates.
+The software update will not be given to connecting clients anymore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveApprovedSoftwareUpdate(Identity updateIdentity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.Metadata.Identity</span></td>
+        <td><span class="parametername">updateIdentity</span></td>
+        <td><p>Identity of update to un-approve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SetMetadataSource_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SetMetadataSource*"></a>
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SetMetadataSource_Microsoft_UpdateServices_Storage_IMetadataSource_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SetMetadataSource(Microsoft.UpdateServices.Storage.IMetadataSource)">SetMetadataSource(IMetadataSource)</h4>
+  <div class="markdown level1 summary"><p>Sets the source of update metadata</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMetadataSource(IMetadataSource metadataSource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.UpdateServices.Storage.IMetadataSource</span></td>
+        <td><span class="parametername">metadataSource</span></td>
+        <td><p>The source for updates metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_StartCategoryScanAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.StartCategoryScanAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_StartCategoryScanAsync_Microsoft_UpdateServices_WebServices_ClientSync_StartCategoryScanRequest_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.StartCategoryScanAsync(Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanRequest)">StartCategoryScanAsync(StartCategoryScanRequest)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -748,19 +947,14 @@ Extended information also includes file URLs</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanResponse</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.StartCategoryScanResponse</span>&gt;</td>
         <td><p>Not implemented</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncPrinterCatalogAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Int32___System_Int32___System_String_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncPrinterCatalogAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L404">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncPrinterCatalogAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncPrinterCatalogAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncPrinterCatalogAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_System_Int32___System_Int32___System_String_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncPrinterCatalogAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,System.Int32[],System.Int32[],System.String)">SyncPrinterCatalogAsync(Cookie, Int32[], Int32[], String)</h4>
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -812,19 +1006,14 @@ Extended information also includes file URLs</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo</span>&gt;</td>
         <td><p>Not implemented</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncUpdatesAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_SyncUpdateParameters_.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncUpdatesAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie%2CMicrosoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L416">View Source</a>
-  </span>
+  
+  
   <a id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncUpdatesAsync_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncUpdatesAsync*"></a>
   <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_SyncUpdatesAsync_Microsoft_UpdateServices_WebServices_ClientSync_Cookie_Microsoft_UpdateServices_WebServices_ClientSync_SyncUpdateParameters_" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.SyncUpdatesAsync(Microsoft.UpdateServices.WebServices.ClientSync.Cookie,Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">SyncUpdatesAsync(Cookie, SyncUpdateParameters)</h4>
   <div class="markdown level1 summary"><p>Handle requests to sync updates. A client presents the list of installed updates and detectoids and the server
@@ -869,9 +1058,61 @@ replies with a list of more applicable updates, if any.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.UpdateServices.WebServices.ClientSync.SyncInfo</span>&gt;</td>
         <td><p>SyncInfo containing updates applicable to the caller.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_OnUnApprovedDriverUpdatesRequested" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.OnUnApprovedDriverUpdatesRequested">OnUnApprovedDriverUpdatesRequested</h4>
+  <div class="markdown level1 summary"><p>Event raised when driver updates are applicable to a client but are not approved for distribution</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event ClientSyncWebService.UnApprovedUpdatesRequestedDelegate OnUnApprovedDriverUpdatesRequested</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.UnApprovedUpdatesRequestedDelegate.html">ClientSyncWebService.UnApprovedUpdatesRequestedDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_OnUnApprovedSoftwareUpdatesRequested" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.OnUnApprovedSoftwareUpdatesRequested">OnUnApprovedSoftwareUpdatesRequested</h4>
+  <div class="markdown level1 summary"><p>Event raised when software updates are applicable to a client but are not approved for distribution</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event ClientSyncWebService.UnApprovedUpdatesRequestedDelegate OnUnApprovedSoftwareUpdatesRequested</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.UnApprovedUpdatesRequestedDelegate.html">ClientSyncWebService.UnApprovedUpdatesRequestedDelegate</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -882,12 +1123,6 @@ replies with a list of more applicable updates, if any.</p>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/microsoft/update-client-server-sync/new/master/apiSpec/new?filename=Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService.md&amp;value=---%0Auid%3A%20Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/microsoft/update-client-server-sync/blob/master/src/client-server-sync-lib/Server/ClientSync.cs/#L56" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

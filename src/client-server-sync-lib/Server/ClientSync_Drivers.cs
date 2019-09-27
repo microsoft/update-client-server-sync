@@ -43,6 +43,8 @@ namespace Microsoft.UpdateServices.ClientSync.Server
 
             List<UpdateInfo> driverUpdates = new List<UpdateInfo>();
 
+            List<Update> unapprovedDriversMatched = new List<Update>();
+
             // Go through all client reported devices
             foreach (var device in parameters.SystemSpec)
             {
@@ -62,27 +64,34 @@ namespace Microsoft.UpdateServices.ClientSync.Server
                     !cachedDrivers.Contains(driverMatchResult.Driver.Identity) &&
                     !IsInstalledDriverBetterMatch(device.installedDriver, driverMatchResult, hardwareIdsToMatch, computerHardwareIds))
                 {
-                    // Get core XML fragment for driver update
-                    var coreXml = GetCoreFragment(driverMatchResult.Driver.Identity);
-
-                    driverUpdates.Add(new UpdateInfo()
+                    if (ApprovedSoftwareUpdates.Contains(driverMatchResult.Driver.Identity))
                     {
-                        Deployment = new Deployment()
+                        // Get core XML fragment for driver update
+                        var coreXml = GetCoreFragment(driverMatchResult.Driver.Identity);
+
+                        driverUpdates.Add(new UpdateInfo()
                         {
-                            Action = DeploymentAction.Install,
-                            ID = 25000,
-                            AutoDownload = "0",
-                            AutoSelect = "0",
-                            SupersedenceBehavior = "0",
-                            IsAssigned = true,
-                            LastChangeTime = "2019-08-06"
-                        },
-                        ID = IdToRevisionMap[driverMatchResult.Driver.Identity.ID],
-                        IsLeaf = true,
-                        Xml = coreXml,
-                        IsShared = false,
-                        Verification = null
-                    });
+                            Deployment = new Deployment()
+                            {
+                                Action = DeploymentAction.Install,
+                                ID = 25000,
+                                AutoDownload = "0",
+                                AutoSelect = "0",
+                                SupersedenceBehavior = "0",
+                                IsAssigned = true,
+                                LastChangeTime = "2019-08-06"
+                            },
+                            ID = IdToRevisionMap[driverMatchResult.Driver.Identity.ID],
+                            IsLeaf = true,
+                            Xml = coreXml,
+                            IsShared = false,
+                            Verification = null
+                        });
+                    }
+                    else
+                    {
+                        unapprovedDriversMatched.Add(driverMatchResult.Driver);
+                    }
                 }
 
                 // Stop matching if we have max updates already
@@ -91,6 +100,11 @@ namespace Microsoft.UpdateServices.ClientSync.Server
                     syncResult.Truncated = true;
                     break;
                 }
+            }
+
+            if(unapprovedDriversMatched.Count > 0)
+            {
+                OnUnApprovedDriverUpdatesRequested?.Invoke(unapprovedDriversMatched);
             }
 
             syncResult.NewUpdates = driverUpdates.ToArray();

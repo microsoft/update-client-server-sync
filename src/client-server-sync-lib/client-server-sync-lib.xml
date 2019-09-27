@@ -1381,6 +1381,76 @@
             <param name="parameters">Sync parameters</param>
             <returns>List of update GUIDs</returns>
         </member>
+        <member name="T:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.UnApprovedUpdatesRequestedDelegate">
+            <summary>
+            Delegate method called to report updates applicable to a client but which are not approved and thus not offered
+            </summary>
+            <param name="requestedUnapprovedUpdates"></param>
+        </member>
+        <member name="E:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.OnUnApprovedSoftwareUpdatesRequested">
+            <summary>
+            Event raised when software updates are applicable to a client but are not approved for distribution
+            </summary>
+        </member>
+        <member name="E:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.OnUnApprovedDriverUpdatesRequested">
+            <summary>
+            Event raised when driver updates are applicable to a client but are not approved for distribution
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedSoftwareUpdate(Microsoft.UpdateServices.Metadata.Identity)">
+            <summary>
+            Adds an update identity to the list of approved software updates.
+            Approved updates are made available to clients connecting to this service.
+            </summary>
+            <param name="approvedUpdate">Approved update</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedSoftwareUpdates(System.Collections.Generic.IEnumerable{Microsoft.UpdateServices.Metadata.Identity})">
+            <summary>
+            Adds a list of update identities to the list of approved software updates.
+            Approved updates are made available to clients connecting to this service.
+            </summary>
+            <param name="approvedUpdates">List of approved updates</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedDriverUpdate(Microsoft.UpdateServices.Metadata.Identity)">
+            <summary>
+            Adds an update identities to the list of approved driver updates.
+            Approved updates are made available to clients connecting to this service.
+            </summary>
+            <param name="approvedUpdate">Approved driver update</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.AddApprovedDriverUpdates(System.Collections.Generic.IEnumerable{Microsoft.UpdateServices.Metadata.Identity})">
+            <summary>
+            Adds a list of update identities to the list of approved driver updates.
+            Approved updates are made available to clients connecting to this service.
+            </summary>
+            <param name="approvedUpdates"></param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RemoveApprovedSoftwareUpdate(Microsoft.UpdateServices.Metadata.Identity)">
+            <summary>
+            Removes an approved software update from the list of approved software updates.
+            The software update will not be given to connecting clients anymore.
+            </summary>
+            <param name="updateIdentity">Identity of update to un-approve</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.RemoveApprovedDriverUpdate(Microsoft.UpdateServices.Metadata.Identity)">
+            <summary>
+            Removes an approved software update from the list of approved software updates.
+            The software update will not be given to connecting clients anymore.
+            </summary>
+            <param name="updateIdentity">Identity of update to un-approve</param>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClearApprovedDriverUpdates">
+            <summary>
+            Clears the list of approved driver updates.
+            Un-approved updates are not made available to connecting clients.
+            </summary>
+        </member>
+        <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.ClearApprovedSoftwareUpdates">
+            <summary>
+            Clears the list of approved software updates.
+            Un-approved updates are not made available to connecting clients.
+            </summary>
+        </member>
         <member name="M:Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.DoDriversSync(Microsoft.UpdateServices.WebServices.ClientSync.SyncUpdateParameters)">
             <summary>
             Handle driver sync requests

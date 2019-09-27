@@ -5,9 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Use UpdateServerStartup to add update services to your ASP.NET web app </title>
+    <title>Delegate ClientSyncWebService.UnApprovedUpdatesRequestedDelegate
+   </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Use UpdateServerStartup to add update services to your ASP.NET web app ">
+    <meta name="title" content="Delegate ClientSyncWebService.UnApprovedUpdatesRequestedDelegate
+   ">
     <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,38 +68,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h3 id="use-updateserverstartup-to-add-update-services-to-your-aspnet-web-app">Use UpdateServerStartup to add update services to your ASP.NET web app</h3>
-
-<h4 id="prerequisites">Prerequisites</h4>
-<ul>
-<li>updates were fetched to a file named master.zip. Use UpSync to fetch some updates from an upstream server (<a href="https://github.com/microsoft/update-server-server-sync/wiki/UpSync-examples">link</a>)</li>
-<li>the server configuration JSON is in server_configuration.json. Get a default configuration file from <a href="https://raw.githubusercontent.com/microsoft/update-client-server-sync/master/src/downsync-tool/default-server-configuration.json">here</a></li>
-</ul>
-<h4 id="use-the-startup-in-your-app">Use the startup in your app</h4>
-<pre><code>var host = new WebHostBuilder()
-    .UseUrls(&quot;http://my_update_server&quot;)
-    .UseStartup&lt;UpdateServerStartup&gt;()
-    .UseKestrel()
-    .ConfigureKestrel((context, opts) =&gt; { })
-    .ConfigureAppConfiguration((hostingContext, config) =&gt;
-    {
-        var configDictionary = new Dictionary&lt;string, string&gt;()
-        {
-            { &quot;metadata-source&quot;, @&quot;master.zip&quot; },
-            { &quot;server-config&quot;, File.ReadAllText(@&quot;server_configuration.json&quot;)},
-            // This server does not serve update content; clients will be directed
-            // to the Microsoft Update CDN
-            { &quot;content-source&quot;, null },
-            // Not required when content downloads are redirected to the official CDN
-            { &quot;content-http-root&quot;, null }
-        };
-        config.AddInMemoryCollection(configDictionary);
-    })
-    .Build();
-
-host.Run();
-</code></pre>
+            <article class="content wrap" id="_content" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.UnApprovedUpdatesRequestedDelegate">
+  
+  
+  <h1 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_UnApprovedUpdatesRequestedDelegate" data-uid="Microsoft.UpdateServices.ClientSync.Server.ClientSyncWebService.UnApprovedUpdatesRequestedDelegate" class="text-break">Delegate ClientSyncWebService.UnApprovedUpdatesRequestedDelegate
+  </h1>
+  <div class="markdown level0 summary"><p>Delegate method called to report updates applicable to a client but which are not approved and thus not offered</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Microsoft.UpdateServices.ClientSync.Server.html">Microsoft.UpdateServices.ClientSync.Server</a></h6>
+  <h6><strong>Assembly</strong>: client-server-sync-lib.dll</h6>
+  <h5 id="Microsoft_UpdateServices_ClientSync_Server_ClientSyncWebService_UnApprovedUpdatesRequestedDelegate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate void UnApprovedUpdatesRequestedDelegate(IEnumerable&lt;Update&gt; requestedUnapprovedUpdates);</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Microsoft.UpdateServices.Metadata.Update</span>&gt;</td>
+        <td><span class="parametername">requestedUnapprovedUpdates</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
